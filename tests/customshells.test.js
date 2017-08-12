@@ -34,10 +34,12 @@ powerShellObj.open();
 commandPromptObj.open();
 nodeShellObj.open();
 
+// CMD WORKS 
 //powerShellObj.execute('test.bat');
-//commandPromptObj.execute('test.bat');
+commandPromptObj.execute('test.bat');
 //nodeShellObj.execute('test.bat');
 
+// CMD WORKS
 //powerShell.toFile('echo', ['This is a test'], 'testOutput.txt');
 //commandPrompt.toFile('echo', ['This is a test'], 'testOutput.txt');
 //nodeShell.toFile('testOutput.txt');
