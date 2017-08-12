@@ -1,4 +1,9 @@
 {"name": "customshells"
 ,"main" : "./index.js"
 ,"version": "1.0.1"
-}
+,"author":"Adam W Patterson"
+,"description": "A library to simplify the creation of shells in Node.js"
+,"repository" :
+{ "type" : "git"
+, "url" : "httpshttps://github.com/Awpatterson217/customshells.gitgithub.com/npm/npm.git"
+}}
