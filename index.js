@@ -5,8 +5,8 @@
  * 
  ***********************************************************/
 
-module.exports.powershell    = require('./lib/powershell');
+module.exports            = require('./lib/commandprompt');
 
-module.exports.commandprompt = require('./lib/commandprompt');
+module.exports.powershell = require('./lib/powershell');
 
-module.exports.nodeshell     = require('./lib/nodeshell');
+module.exports.nodeshell  = require('./lib/nodeshell');
