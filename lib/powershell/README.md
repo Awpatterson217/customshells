@@ -13,6 +13,9 @@ const powershell = require('customshells').powershell;
 
 let powerShell =  powershell.createPowerShell();
 ```
+
+<hr>
+
 ### Open an instance of PowerShell in a new window
 
 ```js

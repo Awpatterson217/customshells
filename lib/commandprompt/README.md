@@ -13,6 +13,7 @@ const commandprompt = require('customshells');
 
 let commandPrompt =  commandprompt.createCommandPrompt();
 ```
+<hr>
 
 ### Open an instance of Command Prompt in a new window
 
@@ -20,8 +21,9 @@ let commandPrompt =  commandprompt.createCommandPrompt();
 commandPrompt.open();
 ```
 
+<hr>
+
 ### Execute a script
-<br><br>
 Opens bash then executes script.
 <br><br>
 UNIX only: child_process.execFile() is faster, it does not open an instance of shell/bash before execution.
@@ -29,6 +31,8 @@ UNIX only: child_process.execFile() is faster, it does not open an instance of s
 ```js
 commandPrompt.execute('example.bat');
 ```
+
+<hr>
 
 ### Pipe output to file
 
