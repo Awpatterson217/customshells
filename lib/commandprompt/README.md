@@ -1,26 +1,37 @@
 # Create an instance of CommandPrompt
-<b>
+
+```js
 const commandprompt = require('customshells');
-<br /><br><br>
+
 let commandPrompt = new commandprompt.CommandPrompt();
-<br /><br>
-or:
-<br /><br>
+```
+
+### or:
+
+```js
+const commandprompt = require('customshells');
+
 let commandPrompt =  commandprompt.createCommandPrompt();
-<hr>
-<h3>Open an instance of Command Prompt in a new window</h3>
-<br><br>
+```
+
+### Open an instance of Command Prompt in a new window
+
+```js
 commandPrompt.open();
-<hr>
-<h3>Execute a script</h3>
+```
+
+### Execute a script
 <br><br>
 Opens bash then executes script.
 <br><br>
 UNIX only: child_process.execFile() is faster, it does not open an instance of shell/bash before execution.
-<br><br>
+
+```js
 commandPrompt.execute('example.bat');
-<hr>
-<h3>Pipe output to file</h3>
-<br><br>
+```
+
+### Pipe output to file
+
+```js
 commandPrompt.toFile('echo', ['parameters'], 'output.txt');
-</b>
+```

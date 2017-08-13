@@ -6,7 +6,7 @@ const powershell = require('customshells').powershell;
 let powerShell = new powershell.PowerShell();
 ```
 
-or:
+### or:
 
 ```js
 const powershell = require('customshells').powershell;
