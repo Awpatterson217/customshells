@@ -9,7 +9,7 @@ or:
 <br /><br>
 let powerShell =  powershell.createPowerShell();
 <hr>
-<h4>Open an instance of PowerShell in a new window</h4>
+<h3>Open an instance of PowerShell in a new window</h3>
 <br /><br>
 powerShell.open();
 </b>

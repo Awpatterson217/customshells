@@ -9,19 +9,19 @@ or:
 <br /><br>
 let nodeShell =  nodeshell.createNodeShell()
 <hr>
-<h4>Open an instance of of Node.js in a new window</h4>
+<h3>Open an instance of of Node.js in a new window</h3>
 <br /><br>
 nodeShell.open();
 <hr>
-<h4>Run a module in a new instance of Node.js</h4> 
+<h3>Run a module in a new instance of Node.js</h3> 
 <br /><br>
 nodeShell.serve('file');
 <hr>
-<h4>Pipe output to file</h4>
+<h3>Pipe output to file</h3>
 <br /><br>
 nodeShell.toFile(module, ...parameters, 'example/output.txt');
 <hr>
-<h4>Open a server in a new instance of Node.js</h4>
+<h3>Open a server in a new instance of Node.js</h3>
 <br /><br>
 nodeShell.httpServer(optionalHost, optionalPort);
 </b>
