@@ -1,19 +1,27 @@
 # Create an instance of NodeShell
-<br />
+<b>
+<br /><br>
 const nodeshell = require('customshells').nodeshell;
-<br />
+<br /><br><br>
 let nodeShell = new nodeshell.NodeShell();
-<br />
+<br /><br>
 or:
-<br />
-let nodeShell =  nodeshell.createNodeShell();
-# Open an instance of of Node.js in a new window
+<br /><br>
+let nodeShell =  nodeshell.createNodeShell()
+<hr>
+<h4>Open an instance of of Node.js in a new window</h4>
+<br /><br>
 nodeShell.open();
-# Run a module in a new instance of Node.js 
+<hr>
+<h4>Run a module in a new instance of Node.js</h4> 
+<br /><br>
 nodeShell.serve('file');
-# Pipe output to file
+<hr>
+<h4>Pipe output to file</h4>
+<br /><br>
 nodeShell.toFile(module, ...parameters, 'example/output.txt');
-# Open a server in a new instance of Node.js
+<hr>
+<h4>Open a server in a new instance of Node.js</h4>
+<br /><br>
 nodeShell.httpServer(optionalHost, optionalPort);
-
-
+</b>

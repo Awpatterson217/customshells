@@ -1,11 +1,15 @@
 # Create an instance of PowerShell
-<br />
+<b>
+<br /><br>
 const powershell = require('customshells').powershell;
-<br />
+<br /><br><br>
 let powerShell = new powershell.PowerShell();
-<br />
+<br /><br>
 or:
-<br />
+<br /><br>
 let powerShell =  powershell.createPowerShell();
-# Open an instance of PowerShell in a new window
+<hr>
+<h4>Open an instance of PowerShell in a new window</h4>
+<br /><br>
 powerShell.open();
+</b>
