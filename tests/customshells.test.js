@@ -1,23 +1,19 @@
 const customshells = require('../');
-const ps           = require('../').powershell;
-const ns           = require('../').nodeshell;
+const powershell   = require('../').powershell;
+const nodeshell    = require('../').nodeshell;
 
-let powerShell    = new ps.PowerShell();
+let powerShell    = new powershell.PowerShell();
 let commandPrompt = new customshells.CommandPrompt();
-let nodeShell     = new ns.NodeShell();
+let nodeShell     = new nodeshell.NodeShell();
 
 // ALL WORK
-//powerShell.open();
+///powerShell.open();
 //commandPrompt.open();
 //nodeShell.open();
 
 // CMD WORKS
 //powerShell.execute('test.bat');
-//commandPrompt.execute('test.bat');
-//nodeShell.execute();
 
-// CMD WORKS
-//powerShell.toFile('echo', ['This is a test'], 'testOutput.txt');
 //commandPrompt.toFile('echo', ['This is a test'], 'testOutput.txt');
 //nodeShell.toFile('testOutput.txt');
 
@@ -25,9 +21,9 @@ let nodeShell     = new ns.NodeShell();
 //nodeShell.httpServer('127.0.0.3');
 //nodeShell.serve('server.test.js');
 
-let powerShellObj    =  ps.createPowerShell();
-let commandPromptObj =  customshells.createCommandPrompt();
-let nodeShellObj     =  ns.createNodeShell();
+let powerShellObj    = powershell.createPowerShell();
+let commandPromptObj = customshells.createCommandPrompt();
+let nodeShellObj     = nodeshell.createNodeShell();
 
 // ALL WORK
 //powerShellObj.open();

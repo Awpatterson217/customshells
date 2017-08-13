@@ -37,5 +37,5 @@ commandPrompt.execute('example.bat');
 ### Pipe output to file
 
 ```js
-commandPrompt.toFile('echo', ['parameters'], 'output.txt');
+commandPrompt.toFile('command', ['parameters'], 'output.txt');
 ```

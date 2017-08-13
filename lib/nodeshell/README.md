@@ -11,12 +11,12 @@ let nodeShell = new nodeshell.NodeShell();
 ```js
 const nodeshell = require('customshells').nodeshell;
 
-let nodeShell =  nodeshell.createNodeShell();
+let nodeShell = nodeshell.createNodeShell();
 ```
 
 <hr>
 
-### Open an instance of of Node.js in a new window
+### Open an instance of Node.js in a new window
 
 ```js
 nodeShell.open();
@@ -37,7 +37,7 @@ nodeShell.toFile(module, ...parameters, 'example/output.txt');
 ```
 <hr>
 
-### Open a server in a new instance of Node.js
+### Run a server in a new instance of Node.js
 
 ```js
 nodeShell.httpServer(optionalHost, optionalPort);
