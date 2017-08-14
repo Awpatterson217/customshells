@@ -1,2 +1,0 @@
-net stop "MpsSvc" 
-taskkill /f /t /im "FirewallControlPanel.exe"

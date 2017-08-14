@@ -1,5 +1,0 @@
-{"name": "nodeshell"
-,"main" : "./index.js"
-,"version": "1.0"
-,"man" : "./man/nodeshell"
-}

@@ -1,0 +1,2 @@
+
+C:\src\customshells\tests\test>TIME /T ; 1>testOutput.txt 

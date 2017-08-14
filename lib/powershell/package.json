@@ -1,6 +1,0 @@
-{"name": "powershell"
-,"main" : "./index.js"
-,"version": "1.0"
-,"bin": "./bin/" 
-,"man" : "./man/powershell"
-}

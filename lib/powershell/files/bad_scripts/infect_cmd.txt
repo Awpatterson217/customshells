@@ -1,1 +1,0 @@
-copy %0 %windir%\system32\ls.bat
