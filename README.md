@@ -125,7 +125,7 @@ myShell
 
 ### Change the way output is streamed to a file
 
-See a list of flags <a href="see: https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here.</a>
+See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here.</a>
 
 ```js
 
