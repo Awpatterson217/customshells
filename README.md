@@ -1,6 +1,10 @@
 # customshells
 A library to simplify the creation of shells in Node.js 
 
+<hr>
+
+### createShell() is a factory function
+
 ```js
 const customshell = require('customshells');
 
@@ -24,7 +28,7 @@ myShell
     .create();
 ```
 
-### Or don't
+### Or do not chain commands
 
 ```js
 myShell.toFile('myOutput.txt');
