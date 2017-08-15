@@ -1,5 +1,6 @@
 const customshell = require('../');
 const createShell = require('../').createShell;
+const Branch      = require('../lib/branches');
 
 let myShellTwo = createShell();
 let myShell = customshell.createShell();
@@ -15,11 +16,11 @@ let myShell = customshell.createShell();
 //myShell.open('node');
 //myShell.open('powershell');
 
-let at = '\\test';
+//let at = '\\test';
 myShell
     .toFile('myOutput.txt')
     .node('myModule.js')
-    .at(at)
+    //.at(at)
     //.new()
     .create();
 
@@ -30,17 +31,22 @@ let myRef = myShell
 console.log(myRef.pid);
 */
 
-let fs = require('fs');
-console.log('Is directory? ' + fs.lstatSync(at).isDirectory());
-console.log();
-fs.readdir(at, (err, files) => {
-  files.forEach(item => {
-    //console.log('Is directory? ' + fs.lstatSync(item).isDirectory());
-      if(fs.lstatSync(item).isDirectory()){
-        console.log('Found: ' + file);
-      }
-  });
-})
+let branch = new Branch();
+
+let root = '/' 
+branch.scanFolder(root);
+
+
+branch.on('finished', (numOfFolders, errors) =>{
+    console.log("Event Listener: finished");
+    console.log("Total number of folders: " + numOfFolders);
+    console.log("Total number of inaccessable folders: " + errors);
+    let directories = Object.keys(branch.directories);
+    directories.forEach( (directory) => {
+        // Do something
+    });
+});
+
 
 /*
 fs.stat(path, callback(err, stats){
