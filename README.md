@@ -24,6 +24,18 @@ myShell
     .create();
 ```
 
+### Or don't
+
+```js
+myShell.toFile('myOutput.txt');
+myShell.at('C:\\example\\path\\');
+
+myEventEmitter.on('myEvent', function(myData){
+    myShell.execute(myData);
+});
+
+myShell.create();
+```
 <hr>
 
 ### Open an instance of your favorite shell in a new window
@@ -96,7 +108,9 @@ myShell
 ### Return a reference to the process
 
 ```js
-let myRef = myShell.create();
+let myRef = myShell
+                .node('myModule.js')
+                .create();
 
 console.log(myRef.pid);
 ```
