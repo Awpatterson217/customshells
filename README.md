@@ -7,9 +7,9 @@ A library to simplify the creation of shells in Node.js
 ### <code>createShell()</code> is a factory function
 
 ```js
-const customshell = require('customshells');
+const customShell = require('customshells');
 
-let myShell = customshell.createShell();
+let myShell = customShell.createShell();
 
 // OR
 
@@ -131,6 +131,8 @@ myShell
 
 ### Run scripts recursively through directories with <code>tree()</code>
 
+This method is in progress.
+
 ```js
 myShell
     .tree('/example/dir');
@@ -181,6 +183,22 @@ newOptions = {
 
 myShell
     .setOptions(newOptions);
+```
+
+<hr>
+
+### Reset customShell with <code>reset()</code>
+
+```js
+myShell
+    .reset();
+
+// reset() is chainable.
+
+myShell
+    .reset()
+    .node('myModule.js')
+    .create();
 ```
 
 <hr> 
