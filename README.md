@@ -104,7 +104,7 @@ myShell
 
 <hr> 
 
-### Run your module/script in a new shell window with <code>new()</code>
+### Run a module/script in a new shell window with <code>new()</code>
 
 ```js
 myShell
@@ -135,7 +135,9 @@ This method is **in progress.**
 
 ```js
 myShell
-    .tree('/example/dir');
+    .execute('myScript.bat')
+    .tree('/example/dir')
+    .create();
 ```
 
 <hr>
