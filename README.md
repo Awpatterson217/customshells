@@ -66,6 +66,7 @@ Will create file at runtime if none exists.
 
 ```js
 myShell
+    .execute('myScript.bat')
     .toFile('/example/output.txt')
     .create();
 ```
@@ -77,7 +78,7 @@ myShell
 ```js
 myShell
     .node('myModule.js')
-    .in('/example/dir')
+    .at('/example/dir')
     .create();
 ```
 
