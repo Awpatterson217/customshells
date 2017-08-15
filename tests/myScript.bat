@@ -1,1 +1,1 @@
-TIME /T > testOutput.txt;
+TIME /T > scriptOutput.txt;

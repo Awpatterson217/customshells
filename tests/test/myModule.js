@@ -1,1 +1,1 @@
-console.log("TESTING FROM /test/");
+console.log("TESTING");

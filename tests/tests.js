@@ -15,17 +15,35 @@ let myShell = customshell.createShell();
 //myShell.open('node');
 //myShell.open('powershell');
 
-/*
+let at = '\\test';
 myShell
-    .toFile('myOutputTwo.txt')
+    .toFile('myOutput.txt')
     .node('myModule.js')
-    .at('C:\\src\\customshells\\tests\\test')
-    .new()
+    .at(at)
+    //.new()
     .create();
-*/
+
 /*
 let myRef = myShell
                 .node('myModule.js')
                 .create();
 console.log(myRef.pid);
+*/
+
+let fs = require('fs');
+console.log('Is directory? ' + fs.lstatSync(at).isDirectory());
+console.log();
+fs.readdir(at, (err, files) => {
+  files.forEach(item => {
+    //console.log('Is directory? ' + fs.lstatSync(item).isDirectory());
+      if(fs.lstatSync(item).isDirectory()){
+        console.log('Found: ' + file);
+      }
+  });
+})
+
+/*
+fs.stat(path, callback(err, stats){
+    
+});
 */

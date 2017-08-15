@@ -78,6 +78,10 @@ myShell
 ### Pipe output to file with <code>toFile()</code>
 
 Will append file or create file at runtime.
+<br>
+<br>
+Will automatically normalize path with <a href="https://nodejs.org/api/path.html#path_path_normalize_path">path.normalize(path).</a>
+
 
 ```js
 myShell
@@ -112,7 +116,9 @@ myShell
 
 <hr>
 
-### Run your module/script in a new directory with <code>at()</code>
+### Run a module/script in a new directory with <code>at()</code>
+
+The module/script must exist in the new directory.
 
 ```js
 myShell
