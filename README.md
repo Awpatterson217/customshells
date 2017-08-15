@@ -77,7 +77,7 @@ myShell
 
 ### Pipe output to file with <code>toFile()</code>
 
-Will append file or create file at runtime
+Will append file or create file at runtime.
 
 ```js
 myShell
