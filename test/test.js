@@ -1,10 +1,11 @@
 const customshell = require('../');
 const createShell = require('../').createShell;
-const Branch      = require('../lib/branches');
+const Tree      = require('../lib/Tree');
 
 let myShellTwo = createShell();
 let myShell = customshell.createShell();
 
+// WORKS
 //myShell.toFile('myOutput.txt');
 //myShell.execute('myscript.bat');
 //myShell.at('C:\\src\\customshells\\tests\\test');
@@ -16,37 +17,45 @@ let myShell = customshell.createShell();
 //myShell.open('node');
 //myShell.open('powershell');
 
-//let at = '\\test';
+/* WORKS
+let link = 'test';
+
 myShell
-    .toFile('myOutput.txt')
-    .node('myModule.js')
-    //.at(at)
-    //.new()
+    .toFile('myCMDOutput.txt')
+    .execute('myScript.bat')
+    .at(link)
+    .new()
     .create();
 
-/*
+myShell
+    .reset()
+    .toFile('myNodeOutput.txt')
+    .at(link)
+    .node('myModule.js')
+    .new()
+    .create();
+
 let myRef = myShell
                 .node('myModule.js')
                 .create();
+
 console.log(myRef.pid);
 */
 
-let branch = new Branch();
+let myTree = new Tree();
 
-let root = '/' 
-branch.scanFolder(root);
+let root = ''; 
+//branch.scanFolder(root);
 
 
-branch.on('finished', (numOfFolders, errors) =>{
-    console.log("Event Listener: finished");
-    console.log("Total number of folders: " + numOfFolders);
-    console.log("Total number of inaccessable folders: " + errors);
-    let directories = Object.keys(branch.directories);
-    directories.forEach( (directory) => {
-        // Do something
-    });
+let ignorees = ['folderOne'];
+myTree.getBranch(root, ignorees);
+
+myTree.on('complete', (numOfDir, numOfDirMissed, reasonsMissed) => {
+    console.log("Directories: "        + numOfDir);
+    console.log("Missed directories: " + numOfDirMissed);
+    console.log("reasonsMissed: "      + reasonsMissed);
 });
-
 
 /*
 fs.stat(path, callback(err, stats){

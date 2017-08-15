@@ -33,7 +33,7 @@ myShell
 
 ```js
 myShell.toFile('myOutput.txt');
-myShell.at('C:\\example\\path\\');
+myShell.at('C:/example/path/');
 
 myEventEmitter.on('myEvent', function(myData){
     myShell.execute(myData);
@@ -72,6 +72,72 @@ myShell
     .execute('myScript.bat')
     .create();
 ```
+<hr>
+
+### Run a module/script recursively through directories with <code>tree()</code>
+
+This method is **in progress.**
+
+Pass in an empty string to begin in the current working directory: <code>''</code>. 
+<br>
+<br>
+Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir).</a>
+
+```js
+myShell
+    .execute('myScript.bat')
+    .tree('example/dir')
+    .create();
+
+// Can pass in directories to ignore as an Array.
+.tree('example/dir', ['example/dir/to/ignore'])
+```
+
+<hr>
+
+### Return the path to every directory in a tree with <code>getBranch()</code>
+
+Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+
+<br><br>
+
+Pass in an empty string to begin in the current working directory: <code>''</code>. 
+
+```js
+let myTree = new Tree();
+
+// Can pass in directories to ignore as an Array.
+myTree.getBranch('example/dir', ['example/dir/to/ignore']);
+```
+
+Tree implements the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a> API. 
+
+```js
+this.on('directory', dir =>{
+    // Collect directories here
+});
+
+this.on('complete', (numOfDirectories, ignoredDirectories) =>{
+    // Do stuff
+});
+
+this.on('error', err =>{
+    // Handle errors
+});
+```
+
+<hr>
+
+### Run a module/script in a new working directory with <code>at()</code>
+
+*Note: Scripts, such as batch files or powershell scripts must be in the working directory specified by <code>.at()</code>. 
+
+```js
+myShell
+    .node('myModule.js')
+    .at('./example/dir')
+    .create();
+```
 
 <hr>
 
@@ -80,13 +146,15 @@ myShell
 Will append file or create file at runtime.
 <br>
 <br>
-Will automatically normalize path with <a href="https://nodejs.org/api/path.html#path_path_normalize_path">path.normalize(path).</a>
+Will automatically format relative path using <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt').</a>
 
+*Note: <code>toFile()</code> is a blocking operation.
+*Note: When running a node module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>.
 
 ```js
 myShell
     .execute('myScript.bat')
-    .toFile('/example/output.txt')
+    .toFile('example/output.txt')
     .create();
 ```
 
@@ -109,34 +177,8 @@ myShell
 ```js
 myShell
     .execute('myScript.bat')
-    .toFile('/example/output.txt')
+    .toFile('example/output.txt')
     .new()
-    .create();
-```
-
-<hr>
-
-### Run a module/script in a new directory with <code>at()</code>
-
-The module/script must exist in the new directory.
-
-```js
-myShell
-    .node('myModule.js')
-    .at('/example/dir')
-    .create();
-```
-
-<hr>
-
-### Run scripts recursively through directories with <code>tree()</code>
-
-This method is **in progress.**
-
-```js
-myShell
-    .execute('myScript.bat')
-    .tree('/example/dir')
     .create();
 ```
 
@@ -156,7 +198,7 @@ console.log(myRef.pid);
 
 ### Respond to events
 
-See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here.</a>
+See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here</a>.
 
 ```js
 let myRef = myShell
@@ -172,7 +214,7 @@ myRef.on('exit', (code) => {
 
 ### Add your own options with <code>setOptions()</code>
 
-See a list of options <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options">here.</a>
+See a list of options <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options">here</a>.
 
 ```js
 newOptions = {
