@@ -121,6 +121,22 @@ console.log(myRef.pid);
 
 <hr>
 
+### Respond to events
+
+See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here.</a>
+
+```js
+let myRef = myShell
+                .node('myModule.js')
+                .create();
+
+myRef.on('exit', (code) => {
+  console.log(`About to exit with code: ${code}`);
+});
+```
+
+<hr>
+
 ### Add your own options
 
 See a list of options <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options">here.</a>
