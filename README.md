@@ -77,7 +77,7 @@ myShell
 
 ### Pipe output to file with <code>toFile()</code>
 
-Will append file or create at runtime
+Will append file or create file at runtime
 
 ```js
 myShell
@@ -186,4 +186,10 @@ myShell
     .create();
 ```
 
-<code>create()</code> returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess.</a>
+Returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess.</a> 
+<br>
+<br>
+Uses the <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options"><code>child_process.spawn()</code></a> method.
+<br>
+<br>
+Creates processes asynchronously.
