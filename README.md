@@ -131,7 +131,7 @@ myShell
 
 ### Run scripts recursively through directories with <code>tree()</code>
 
-This method is in progress.
+**This method is in progress.**
 
 ```js
 myShell
