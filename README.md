@@ -185,3 +185,5 @@ myShell
 myShell
     .create();
 ```
+
+<code>create()</code> returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess.</a>
