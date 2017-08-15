@@ -18,7 +18,7 @@ const createShell = require('customshells').createShell;
 let myShell = createShell();
 ```
 
-### Chain commands
+### Chain methods
 
 ```js
 myShell
@@ -29,7 +29,7 @@ myShell
     .create();
 ```
 
-### Or do not chain commands
+### Or do not chain methods
 
 ```js
 myShell.toFile('myOutput.txt');
