@@ -42,7 +42,7 @@ myShell.create();
 ```
 <hr>
 
-### Open an instance of your favorite shell in a new window
+### Open an instance of your favorite shell in a new window with <code>open()</code>
 
 ```js
 myShell.open('node');
@@ -54,29 +54,27 @@ myShell.open('cmd');
 
 <hr>
 
-### Run a module in a new instance of Node.js
+### Run a node module with <code>node()</code>
 
 ```js
 myShell
     .node('myModule.js')
-    .new()
     .create();
 ```
 
 <hr>
 
-### Execute a script in a new shell instance
+### Execute a script with <code>execute()</code>
 
 ```js
 myShell
     .execute('myScript.bat')
-    .new()
     .create();
 ```
 
 <hr>
 
-### Pipe output to file
+### Pipe output to file with <code>toFile()</code>
 
 Will create file at runtime if none exists.
 
@@ -89,7 +87,31 @@ myShell
 
 <hr>
 
-### Run your module/script in a new directory
+### Change the way output is streamed to a file
+
+See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here.</a>
+
+```js
+
+myShell
+    .toFile('myOutput.txt', 'FLAG');
+```
+
+<hr> 
+
+### Run your module/script in a new shell window with <code>new()</code>
+
+```js
+myShell
+    .execute('myScript.bat')
+    .toFile('/example/output.txt')
+    .new()
+    .create();
+```
+
+<hr>
+
+### Run your module/script in a new directory with <code>at()</code>
 
 ```js
 myShell
@@ -100,7 +122,7 @@ myShell
 
 <hr>
 
-### Recursively run scripts through directories 
+### Run scripts recursively through directories with <code>tree()</code>
 
 ```js
 myShell
@@ -137,7 +159,7 @@ myRef.on('exit', (code) => {
 
 <hr>
 
-### Add your own options
+### Add your own options with <code>setOptions()</code>
 
 See a list of options <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options">here.</a>
 
@@ -156,19 +178,7 @@ myShell
 
 <hr> 
 
-### Change the way output is streamed to a file
-
-See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here.</a>
-
-```js
-
-myShell
-    .toFile('myOutput.txt', 'FLAG');
-```
-
-<hr> 
-
-### Nothing happens until create()
+### Nothing happens until <code>create()</code>
 
 ```js
 myShell
