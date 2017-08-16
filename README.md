@@ -4,8 +4,6 @@ A library to simplify the creation of shells in Node.js
 <br>
 <hr>
 
-### <code>createShell()</code> is a factory function
-
 ```js
 const customShell = require('customshells');
 
