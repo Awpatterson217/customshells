@@ -76,12 +76,12 @@ myShell
 
 ### Run a module/script recursively through directories with <code>tree()</code>
 
-This method is **in progress.**
+<center>**This method is in progress.**</center>
 
 Pass in an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
 <br>
-Use absolute paths: <code>.tree('C:/Users/user/example')</code> Or relative paths: <code>.tree('../example/path')</code>
+Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp; Or relative paths: <code>.tree('../example/path')</code>
 <br>
 <br>
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
