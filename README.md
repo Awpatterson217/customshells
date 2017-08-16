@@ -71,7 +71,7 @@ myShell
 
 Methods belonging to <code>Tree</code> run independently of <code>.create()</code> 
 
-Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
 const Tree = require('customshells').Tree;
@@ -107,7 +107,7 @@ myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 
 ```js
 this.on('file', (file, extension) =>{
-    // Returns fies and their extensions one at a time
+    // Returns files and their extensions one at a time
 });
 
 this.on('filePath', (directory) =>{
@@ -171,7 +171,7 @@ Will append file or create file at runtime.
 Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt')</a>.
 
 
-*Note: <code>toFile()</code> blocks I/O.
+*Note: Writes synchronously.
 
 *Note: When running a Node.js module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
 
