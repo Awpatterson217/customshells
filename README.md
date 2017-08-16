@@ -101,7 +101,7 @@ myShell
 
 <hr>
 
-### Recursively return all directories in a directory, with <code>getBranch()</code>
+### Recursively return all directories in a directory with <code>getBranch()</code>
 
 Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
