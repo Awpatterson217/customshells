@@ -80,7 +80,7 @@ Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_rea
 ```js
 let myTree = new Tree();
 
-// Pass an array of directories to ignore
+// Optionally, pass an array of directories to ignore
 myTree.getBranch('example/dir', ['example/dir/to/ignore']);
 ```
 
