@@ -1,0 +1,1 @@
+TIME /T > scriptOutput.txt;

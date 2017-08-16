@@ -16,7 +16,7 @@ const createShell = require('customshells').createShell;
 let myShell = createShell();
 ```
 
-### Chain methods
+### Chainable methods
 
 ```js
 myShell
@@ -27,20 +27,6 @@ myShell
     .create();
 ```
 
-### Do not chain methods
-
-```js
-myShell.toFile('myOutput.txt');
-myShell.at('C:/example/path/');
-
-myEventEmitter.on('myEvent', function(myData){
-    myShell.execute(myData);
-});
-
-myShell.create();
-```
-<hr>
-
 ### Open an instance of your favorite shell in a new window with <code>open()</code>
 
 Runs independently of <code>.create()</code> 
@@ -48,6 +34,9 @@ Runs independently of <code>.create()</code>
 ```js
 
 myShell.open('node');
+
+
+myShell.open('python');
 
 // Windows only
 myShell.open('powershell'); 
@@ -78,7 +67,7 @@ myShell
 
 <hr>
 
-### Recursively return all directories from root with <code>getBranch()</code>
+### Recursively return all directories with <code>getBranch()</code>
 
 Runs independently of <code>.create()</code> 
 
@@ -90,7 +79,7 @@ const Tree = require('customshells').Tree;
 let myTree  = new Tree();
 
 // Optionally, pass an array of directories to ignore
-myTree.getBranch('example/dir', ['example/dir/to/ignore']);
+myTree.getBranch('example/root', ['example/dir/to/ignore']);
 ```
 
 Tree implements the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a> API. 
@@ -100,8 +89,37 @@ this.on('dir', directory =>{
     // Returns directories one at a time
 });
 
-this.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) =>{
-    // getBranch() has finished
+this.on('gathered', (numOfDir, numOfDirMissed, errors) =>{
+    // Asnyc stuff here
+});
+
+this.on('error', err =>{
+    // Handle errors
+});
+```
+
+### Recursively match files by extension with <code>getLeaves()</code>
+
+Runs independently of <code>.create()</code> 
+
+
+```js
+
+// Optionally, pass an array of directories to ignore
+myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
+```
+
+```js
+this.on('file', (file, extension) =>{
+    // Returns fies and their extensions one at a time
+});
+
+this.on('filePath', (directory) =>{
+    // Emits 'filePath' instead of 'dir' for convenience
+});
+
+this.on('autumn', (numOfFiles, extensionsMatched, numOfDirMissed, errors) =>{
+    // More asnyc stuff here
 });
 
 this.on('error', err =>{
@@ -111,9 +129,7 @@ this.on('error', err =>{
 
 <hr>
 
-### Run a module/script recursively through directories with <code>tree()</code>
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
+### Run a Node.js module/script recursively through directories with <code>tree()</code>
 
 Pass an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
@@ -133,12 +149,12 @@ myShell
     .create();
 
 // Pass an array of directories to ignore
-.tree('example/dir', ['example/dir/to/ignore'])
+.tree('example/dir', ['directories/to/ignore'])
 ```
 
 <hr>
 
-### Run a module/script in a new working directory with <code>at()</code>
+### Run a Node.js module/script in a new working directory with <code>at()</code>
 
 *Note: Scripts, such as batch files or powershell scripts must be in the working directory specified by <code>.at()</code>
 
@@ -161,7 +177,7 @@ Will automatically format relative path using <a href="https://nodejs.org/dist/l
 
 *Note: <code>toFile()</code> is a blocking operation.
 
-*Note: When running a node module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
+*Note: When running a Node.js module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
 
 ```js
 myShell
@@ -226,7 +242,7 @@ myRef.on('exit', (code) => {
 
 <hr>
 
-### Add your own options with <code>setOptions()</code>
+### Set options with <code>setOptions()</code>
 
 See a list of options <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options">here</a>.
 
@@ -248,10 +264,6 @@ myShell
 ### Reset customShell with <code>reset()</code>
 
 ```js
-myShell
-    .reset();
-
-// reset() is chainable
 
 myShell
     .reset()
