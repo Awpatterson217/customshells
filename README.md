@@ -87,7 +87,7 @@ Use absolute paths: <code>.tree('C:/Users/user/example')</code>
 Or relative paths: <code>.tree('../example/path')</code>
 <br>
 <br>
-Avoid beginning paths with: <code>/</code> or <code>\</code>
+Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
 Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir).</a>
