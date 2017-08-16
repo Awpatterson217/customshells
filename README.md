@@ -29,7 +29,7 @@ myShell
     .create();
 ```
 
-### Or do not chain methods
+### Do not chain methods
 
 ```js
 myShell.toFile('myOutput.txt');
@@ -107,9 +107,6 @@ myShell
 ### Return the path to every directory in a tree with <code>getBranch()</code>
 
 Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
-
-<br><br>
-
 
 ```js
 let myTree = new Tree();
