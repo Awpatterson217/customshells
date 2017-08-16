@@ -78,7 +78,16 @@ myShell
 
 This method is **in progress.**
 
-Pass in an empty string to begin in the current working directory: <code>''</code>. 
+Pass in an empty string to begin in the current working directory: <code>.tree('')</code>. 
+<br>
+<br>
+Use absolute paths: <code>.tree('C:/Users/user/example')</code>. 
+<br>
+<br>
+Or relative paths: <code>.tree('../example/path')</code>. 
+<br>
+<br>
+Avoid beginning paths with: <code>/</code> or <code>\</code>. 
 <br>
 <br>
 Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir).</a>
@@ -89,7 +98,7 @@ myShell
     .tree('example/dir')
     .create();
 
-// Can pass in directories to ignore as an Array.
+// Pass an array of directories to ignore.
 .tree('example/dir', ['example/dir/to/ignore'])
 ```
 
@@ -106,18 +115,18 @@ Pass in an empty string to begin in the current working directory: <code>''</cod
 ```js
 let myTree = new Tree();
 
-// Can pass in directories to ignore as an Array.
+// Pass an array of directories to ignore.
 myTree.getBranch('example/dir', ['example/dir/to/ignore']);
 ```
 
 Tree implements the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a> API. 
 
 ```js
-this.on('directory', dir =>{
+this.on('dir', directory =>{
     // Collect directories here
 });
 
-this.on('complete', (numOfDirectories, ignoredDirectories) =>{
+this.on('gathered', (numOfDirectories, ignoredDirectories) =>{
     // Do stuff
 });
 

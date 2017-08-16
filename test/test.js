@@ -1,7 +1,10 @@
+"use strict";
+
 const customshell = require('../');
 const createShell = require('../').createShell;
 const Tree      = require('../lib/Tree');
 
+// WORKS
 let myShellTwo = createShell();
 let myShell = customshell.createShell();
 
@@ -17,9 +20,9 @@ let myShell = customshell.createShell();
 //myShell.open('node');
 //myShell.open('powershell');
 
-/* WORKS
-let link = 'test';
-
+const link = 'test';
+/*
+// WORKS
 myShell
     .toFile('myCMDOutput.txt')
     .execute('myScript.bat')
@@ -27,6 +30,7 @@ myShell
     .new()
     .create();
 
+// WORKS
 myShell
     .reset()
     .toFile('myNodeOutput.txt')
@@ -35,6 +39,7 @@ myShell
     .new()
     .create();
 
+// WORKS
 let myRef = myShell
                 .node('myModule.js')
                 .create();
@@ -45,20 +50,12 @@ console.log(myRef.pid);
 let myTree = new Tree();
 
 let root = ''; 
-//branch.scanFolder(root);
-
-
 let ignorees = ['folderOne'];
+
 myTree.getBranch(root, ignorees);
 
-myTree.on('complete', (numOfDir, numOfDirMissed, reasonsMissed) => {
+myTree.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) => {
     console.log("Directories: "        + numOfDir);
     console.log("Missed directories: " + numOfDirMissed);
     console.log("reasonsMissed: "      + reasonsMissed);
 });
-
-/*
-fs.stat(path, callback(err, stats){
-    
-});
-*/

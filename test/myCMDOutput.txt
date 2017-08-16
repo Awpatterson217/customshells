@@ -7,3 +7,5 @@ C:\src\customshells\test\test>TIME /T ; 1>scriptOutput.txt
 C:\src\customshells\test\test>TIME /T ; 1>scriptOutput.txt 
 
 C:\src\customshells\test\test>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\test>TIME /T ; 1>scriptOutput.txt 
