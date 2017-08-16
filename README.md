@@ -116,11 +116,11 @@ Tree implements the Node.js <a href="https://nodejs.org/api/events.html#events_c
 
 ```js
 this.on('dir', directory =>{
-    // Collect directories here
+    // Returns directories one at a time
 });
 
 this.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) =>{
-    // getBranch() is a non-blocking method
+    // getBranch() has finished
 });
 
 this.on('error', err =>{
