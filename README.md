@@ -76,7 +76,7 @@ myShell
 
 ### Run a module/script recursively through directories with <code>tree()</code>
 
-&nbsp; &nbsp; &nbsp; &nbsp; *Note: **This method is in progress.**
+&nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
 
 Pass in an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
