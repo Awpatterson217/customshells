@@ -26,7 +26,6 @@ let myShell = customshell.createShell();
 //myShell.open('node');
 //myShell.open('powershell');
 
-// WORKS
 const root       = '../../commandcenter'; 
 const Extensions = ['.js', '.css']; 
 const link       = 'testFolder';
@@ -71,27 +70,29 @@ console.log(myRef.pid);
 
 // Works
 //myTree.getBranch(root);
+//myTree.getLeaves(root, Extensions);
 
-myTree.getLeaves(root, Extensions);
-
+/*
+// Works
 myTree.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) => {
     console.log("Directories: "        + numOfDir);
     console.log("Missed directories: " + numOfDirMissed);
     console.log("reasonsMissed: "      + reasonsMissed);
 });
-
+// Works
 myTree.on('file', (file, extension) =>{
     console.log("File: "      + file);
     console.log("Extension: " + extension);
 });
-
+// Works
 myTree.on('filePath', (directory) =>{
     //console.log("directory: " + directory);
 });
-
+// Works
 myTree.on('autumn', (numOfFiles, extensionsMatched, numOfDirMissed, reasonsMissed) =>{
     console.log("Files: "                 + numOfFiles);
     console.log("Extensions Matched: "    + extensionsMatched);
     console.log("numOfDirMissed: "        + numOfDirMissed);
     console.log("reasonsMissed: "         + reasonsMissed);
 });
+*/

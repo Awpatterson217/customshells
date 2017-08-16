@@ -69,7 +69,7 @@ myShell
 
 ### Recursively return all directories with <code>getBranch()</code>
 
-Runs independently of <code>.create()</code> 
+Methods belonging to <code>Tree</code> runs independently of <code>.create()</code> 
 
 Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
@@ -100,11 +100,7 @@ this.on('error', err =>{
 
 ### Recursively match files by extension with <code>getLeaves()</code>
 
-Runs independently of <code>.create()</code> 
-
-
 ```js
-
 // Optionally, pass an array of directories to ignore
 myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 ```
@@ -119,7 +115,7 @@ this.on('filePath', (directory) =>{
 });
 
 this.on('autumn', (numOfFiles, extensionsMatched, numOfDirMissed, errors) =>{
-    // More asnyc stuff here
+    // getLeaves() is done
 });
 
 this.on('error', err =>{
@@ -140,7 +136,7 @@ Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp;  Or relat
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
-Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
 myShell
@@ -156,7 +152,7 @@ myShell
 
 ### Run a Node.js module/script in a new working directory with <code>at()</code>
 
-*Note: Scripts, such as batch files or powershell scripts must be in the working directory specified by <code>.at()</code>
+*Note: Scripts must be in the same working directory specified by <code>.at()</code>
 
 ```js
 myShell
@@ -172,10 +168,10 @@ myShell
 Will append file or create file at runtime.
 
 
-Will automatically format relative path using <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt').</a>
+Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt')</a>.
 
 
-*Note: <code>toFile()</code> is a blocking operation.
+*Note: <code>toFile()</code> blocks I/O.
 
 *Note: When running a Node.js module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
 
@@ -190,7 +186,7 @@ myShell
 
 ### Change the way output is streamed to a file
 
-Default flag: <code> -a </code>
+Default flag: <code> 'a' </code>
 
 See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here</a>.
 
