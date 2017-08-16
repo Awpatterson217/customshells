@@ -46,9 +46,11 @@ myShell.create();
 Runs independently of <code>.create()</code> 
 
 ```js
+
 myShell.open('node');
 
-myShell.open('powershell');
+// Windows only
+myShell.open('powershell'); 
 
 myShell.open('cmd');
 ```
