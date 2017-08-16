@@ -24,7 +24,7 @@ let myShell = createShell();
 myShell
     .toFile('myOutput.txt')
     .node('myModule.js')
-    .at('/foo/bar')
+    .at('foo/bar')
     .new()
     .create();
 ```
@@ -125,7 +125,7 @@ this.on('dir', directory =>{
     // Collect directories here
 });
 
-this.on('gathered', (numOfDirectories, ignoredDirectories) =>{
+this.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) =>{
     // getBranch() is a non-blocking method
 });
 
