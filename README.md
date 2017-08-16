@@ -76,9 +76,9 @@ myShell
 
 ### Run a module/script recursively through directories with <code>tree()</code>
 
-&nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
 
-Pass in an empty string to begin in the current working directory: <code>.tree('')</code>
+Pass an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
 <br>
 Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp;  Or relative paths: <code>.tree('../example/path')</code>
@@ -95,7 +95,7 @@ myShell
     .tree('example/dir')
     .create();
 
-// Pass an array of directories to ignore.
+// Pass an array of directories to ignore
 .tree('example/dir', ['example/dir/to/ignore'])
 ```
 
@@ -108,7 +108,7 @@ Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_rea
 ```js
 let myTree = new Tree();
 
-// Pass an array of directories to ignore.
+// Pass an array of directories to ignore
 myTree.getBranch('example/dir', ['example/dir/to/ignore']);
 ```
 
@@ -166,6 +166,8 @@ myShell
 
 ### Change the way output is streamed to a file
 
+Default flag: <code>a</code>
+
 See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here</a>.
 
 ```js
@@ -210,7 +212,7 @@ let myRef = myShell
                 .create();
 
 myRef.on('exit', (code) => {
-  console.log(`About to exit with code: ${code}`);
+  console.log('About to exit with code: ' + code);
 });
 ```
 
@@ -241,7 +243,7 @@ myShell
 myShell
     .reset();
 
-// reset() is chainable.
+// reset() is chainable
 
 myShell
     .reset()
