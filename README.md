@@ -78,7 +78,7 @@ myShell
 
 This method is **in progress.**
 
-Pass in an empty string to begin in the current working directory: <code>.tree('')</code>. 
+Pass in an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
 <br>
 Use absolute paths: <code>.tree('C:/Users/user/example')</code>
@@ -90,7 +90,7 @@ Or relative paths: <code>.tree('../example/path')</code>
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
-Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir).</a>
+Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
 myShell
@@ -138,7 +138,7 @@ this.on('error', err =>{
 
 ### Run a module/script in a new working directory with <code>at()</code>
 
-*Note: Scripts, such as batch files or powershell scripts must be in the working directory specified by <code>.at()</code>. 
+*Note: Scripts, such as batch files or powershell scripts must be in the working directory specified by <code>.at()</code>
 
 ```js
 myShell
@@ -157,7 +157,7 @@ Will append file or create file at runtime.
 Will automatically format relative path using <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt').</a>
 
 *Note: <code>toFile()</code> is a blocking operation.
-*Note: When running a node module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>.
+*Note: When running a node module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
 
 ```js
 myShell
@@ -170,7 +170,7 @@ myShell
 
 ### Change the way output is streamed to a file
 
-See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here.</a>
+See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here</a>.
 
 ```js
 
@@ -262,7 +262,7 @@ myShell
     .create();
 ```
 
-Returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess.</a> 
+Returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess</a>. 
 <br>
 <br>
 Uses the <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options"><code>child_process.spawn()</code></a> method.
