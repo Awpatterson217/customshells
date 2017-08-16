@@ -70,32 +70,6 @@ myShell
     .execute('myScript.bat')
     .create();
 ```
-<hr>
-
-### Run a module/script recursively through directories with <code>tree()</code>
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
-
-Pass an empty string to begin in the current working directory: <code>.tree('')</code>
-<br>
-<br>
-Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp;  Or relative paths: <code>.tree('../example/path')</code>
-<br>
-<br>
-Avoid beginning paths with: <code>/</code> or <code>\\</code>
-<br>
-<br>
-Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
-
-```js
-myShell
-    .execute('myScript.bat')
-    .tree('example/dir')
-    .create();
-
-// Pass an array of directories to ignore
-.tree('example/dir', ['example/dir/to/ignore'])
-```
 
 <hr>
 
@@ -124,6 +98,33 @@ this.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) =>{
 this.on('error', err =>{
     // Handle errors
 });
+```
+
+<hr>
+
+### Run a module/script recursively through directories with <code>tree()</code>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Note: This method is in progress.**
+
+Pass an empty string to begin in the current working directory: <code>.tree('')</code>
+<br>
+<br>
+Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp;  Or relative paths: <code>.tree('../example/path')</code>
+<br>
+<br>
+Avoid beginning paths with: <code>/</code> or <code>\\</code>
+<br>
+<br>
+Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+
+```js
+myShell
+    .execute('myScript.bat')
+    .tree('example/dir')
+    .create();
+
+// Pass an array of directories to ignore
+.tree('example/dir', ['example/dir/to/ignore'])
 ```
 
 <hr>
