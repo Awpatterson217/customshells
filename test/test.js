@@ -2,11 +2,11 @@
 
 const customshell = require('../');
 const createShell = require('../').createShell;
-const Tree      = require('../lib/Tree');
+const Tree        = require('../');
 
 // WORKS
-let myShellTwo = createShell();
-let myShell = customshell.createShell();
+let myShellTwo = customshell.createShell();
+let myShell = customshell.customshell.createShell();
 
 // WORKS
 //myShell.toFile('myOutput.txt');
@@ -50,9 +50,9 @@ console.log(myRef.pid);
 let myTree = new Tree();
 
 let root = ''; 
-let ignorees = ['folderOne'];
+//let ignorees = ['folderOne'];
 
-myTree.getBranch(root, ignorees);
+myTree.getBranch(root);
 
 myTree.on('gathered', (numOfDir, numOfDirMissed, reasonsMissed) => {
     console.log("Directories: "        + numOfDir);
