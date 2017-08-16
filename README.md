@@ -52,6 +52,7 @@ myShell.open('node');
 // Windows only
 myShell.open('powershell'); 
 
+// Windows only
 myShell.open('cmd');
 ```
 
@@ -77,7 +78,7 @@ myShell
 
 <hr>
 
-### Recursively return all directories in a directory with <code>getBranch()</code>
+### Recursively return all directories from root with <code>getBranch()</code>
 
 Runs independently of <code>.create()</code> 
 
@@ -86,7 +87,7 @@ Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_rea
 ```js
 const Tree = require('customshells').Tree;
 
-let myTree = new Tree();
+let myTree  = new Tree();
 
 // Optionally, pass an array of directories to ignore
 myTree.getBranch('example/dir', ['example/dir/to/ignore']);

@@ -1,12 +1,20 @@
 "use strict";
 
 const customshell = require('../');
-const createShell = require('../').createShell;
-const Tree        = require('../');
+const Tree = require('../').Tree;
+
+//const Tree        = require('customshells').Tree;
+//const customShell = require('customshells');
+
+let myTree  = new Tree();
+let myShell = customshell.createShell();
+
+console.log(Tree);
+console.log(customshell);
 
 // WORKS
-let myShellTwo = customshell.createShell();
-let myShell = customshell.customshell.createShell();
+//let myShellTwo = createShell();
+//let myShell = createShell();
 
 // WORKS
 //myShell.toFile('myOutput.txt');
@@ -47,7 +55,7 @@ let myRef = myShell
 console.log(myRef.pid);
 */
 
-let myTree = new Tree();
+//let myTree = new Tree();
 
 let root = ''; 
 //let ignorees = ['folderOne'];
