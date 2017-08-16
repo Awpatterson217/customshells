@@ -81,13 +81,13 @@ This method is **in progress.**
 Pass in an empty string to begin in the current working directory: <code>.tree('')</code>. 
 <br>
 <br>
-Use absolute paths: <code>.tree('C:/Users/user/example')</code>. 
+Use absolute paths: <code>.tree('C:/Users/user/example')</code>
 <br>
 <br>
-Or relative paths: <code>.tree('../example/path')</code>. 
+Or relative paths: <code>.tree('../example/path')</code>
 <br>
 <br>
-Avoid beginning paths with: <code>/</code> or <code>\</code>. 
+Avoid beginning paths with: <code>/</code> or <code>\</code>
 <br>
 <br>
 Will automatically format relative path using <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir).</a>
@@ -110,7 +110,6 @@ Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_rea
 
 <br><br>
 
-Pass in an empty string to begin in the current working directory: <code>''</code>. 
 
 ```js
 let myTree = new Tree();
@@ -127,7 +126,7 @@ this.on('dir', directory =>{
 });
 
 this.on('gathered', (numOfDirectories, ignoredDirectories) =>{
-    // Do stuff
+    // getBranch() is a non-blocking method
 });
 
 this.on('error', err =>{
