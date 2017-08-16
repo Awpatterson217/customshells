@@ -81,10 +81,7 @@ This method is **in progress.**
 Pass in an empty string to begin in the current working directory: <code>.tree('')</code>
 <br>
 <br>
-Use absolute paths: <code>.tree('C:/Users/user/example')</code>
-<br>
-<br>
-Or relative paths: <code>.tree('../example/path')</code>
+Use absolute paths: <code>.tree('C:/Users/user/example')</code> Or relative paths: <code>.tree('../example/path')</code>
 <br>
 <br>
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
