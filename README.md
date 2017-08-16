@@ -153,13 +153,13 @@ myShell
 
 Will append file or create file at runtime.
 
-<br><br>
+<br>
 
 Will automatically format relative path using <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt').</a>
 
 *Note: <code>toFile()</code> is a blocking operation.
 
-<br><br>
+<br>
 
 *Note: When running a node module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
 
