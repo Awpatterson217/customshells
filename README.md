@@ -43,6 +43,8 @@ myShell.create();
 
 ### Open an instance of your favorite shell in a new window with <code>open()</code>
 
+Runs independently of <code>.create()</code> 
+
 ```js
 myShell.open('node');
 
@@ -75,9 +77,13 @@ myShell
 
 ### Recursively return all directories in a directory with <code>getBranch()</code>
 
+Runs independently of <code>.create()</code> 
+
 Will format relative path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
+const Tree = require('customshells').Tree;
+
 let myTree = new Tree();
 
 // Optionally, pass an array of directories to ignore
