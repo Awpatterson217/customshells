@@ -166,7 +166,7 @@ myShell
 
 ### Change the way output is streamed to a file
 
-Default flag: <code>a</code>
+Default flag: <code> -a </code>
 
 See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_open_path_flags_mode_callback">here</a>.
 
