@@ -1,5 +1,5 @@
 # customshells
-A library to simplify the creation of shells in Node.js 
+A library to simplify the use of shells in Node.js 
 <br>
 <br>
 <hr>
@@ -11,9 +11,9 @@ let myShell = customShell.createShell();
 
 // OR
 
-const createShell = require('customshells').createShell;
+const Tree = require('customshells').Tree;
 
-let myShell = createShell();
+let myTree  = new Tree();
 ```
 
 ### Chainable methods
@@ -74,10 +74,6 @@ Methods belonging to <code>Tree</code> run independently of <code>.create()</cod
 Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
-const Tree = require('customshells').Tree;
-
-let myTree  = new Tree();
-
 // Optionally, pass an array of directories to ignore
 myTree.getBranch('example/root', ['example/dir/to/ignore']);
 ```
@@ -89,7 +85,7 @@ this.on('dir', directory =>{
     // Returns directories one at a time
 });
 
-this.on('gathered', (numOfDir, numOfDirMissed, errors) =>{
+this.on('gathered', (errors, directories) =>{
     // Asnyc stuff here
 });
 
@@ -110,11 +106,11 @@ this.on('file', (file, extension) =>{
     // Returns files and their extensions one at a time
 });
 
-this.on('filePath', (directory) =>{
-    // Emits 'filePath' instead of 'dir' for convenience
+this.on('dirFound', directory =>{
+    // Emits 'dirFound' instead of 'dir' for convenience
 });
 
-this.on('autumn', (numOfFiles, extensionsMatched, numOfDirMissed, errors) =>{
+this.on('autumn', (errors, files, extensionsMatched) =>{
     // getLeaves() is done
 });
 
