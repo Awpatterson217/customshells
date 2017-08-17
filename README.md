@@ -81,15 +81,17 @@ myTree.getBranch('example/root', ['example/dir/to/ignore']);
 Tree implements the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a> API. 
 
 ```js
-this.on('dir', directory =>{
-    // Returns directories one at a time
+myTree.on('dir', directory =>{
+    // Fires each time getBranch() finds a directory
 });
 
-this.on('gathered', (errors, directories) =>{
-    // Asnyc stuff here
+myTree.on('gathered', (errors, directories) =>{
+    // Fired when getBranch() is finished searching
+    // If it exists, errors is an array of Objects { dir, msg }
+    // directories is an array of matching directories
 });
 
-this.on('error', err =>{
+myTree.on('error', err =>{
     // Handle errors
 });
 ```
@@ -102,19 +104,23 @@ myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 ```
 
 ```js
-this.on('file', (file, extension) =>{
+myTree.on('file', (file, extension) =>{
     // Returns files and their extensions one at a time
 });
 
-this.on('dirFound', directory =>{
-    // Emits 'dirFound' instead of 'dir' for convenience
+myTree.on('dirFound', directory =>{
+    // Fires each time getLeaves() finds a directory
 });
 
-this.on('autumn', (errors, files, extensionsMatched) =>{
-    // getLeaves() is done
+myTree.on('autumn', (errors, files, extensionsMatched) =>{
+    // Fired when getLeaves() is finished searching
+    // If it exists, errors is an array of Objects { dir, msg }
+    // Files is an array of matching files
+    // If it exists extensionsMatched is an array of extensions
+    // matched successfully by getLeaves()
 });
 
-this.on('error', err =>{
+myTree.on('error', err =>{
     // Handle errors
 });
 ```
