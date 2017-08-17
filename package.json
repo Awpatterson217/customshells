@@ -1,9 +1,35 @@
 {"name": "customshells"
 ,"main" : "./index.js"
 ,"version": "1.0.0"
-,"author":"Adam W Patterson"
+,"author": "Adam W Patterson"
 ,"description": "A library to simplify the creation of shells in Node.js"
-,"repository" :
-{ "type" : "git"
-, "url" : "https://github.com/Awpatterson217/customshells.git"
+,"license": "(MIT OR Apache-2.0)"
+,"keywords" : [
+    "tree", 
+    "customshells", 
+    "customshell", 
+    "custom", 
+    "shell", 
+    "shells", 
+    "recursively", 
+    "recursive",
+    "recursion",
+    "folders",
+    "directories",
+    "directory",
+    "nested",
+    "command",
+    "commands",
+    "node",
+    "script",
+    "scripts",
+    "module",
+    "modules"
+]
+,"directories.lib": "lib"
+,"directories.test": "test"
+,"os": ["linux", "darwin", "win"]
+,"repository":
+{"type": "git"
+, "url": "https://github.com/Awpatterson217/customshells.git"
 }}

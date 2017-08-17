@@ -7,16 +7,16 @@ const Tree = require('../').Tree;
 //const customShell = require('customshells');
 
 // WORKS
-let myTree = new customshell.Tree();
-let myTreeTwo = new customshell.Tree();
+//let myTree = new customshell.Tree();
+//let myTreeTwo = new customshell.Tree();
 
 // WORKS
 //let myTree  = new Tree();
 //let myShell = customshell.createShell();
 
 // WORKS
-//let myShellTwo = createShell();
-//let myShell = createShell();
+//let myShellTwo = customshell.createShell();
+let myShell = customshell.createShell();
 
 // WORKS
 //myShell.toFile('myOutput.txt');
@@ -55,14 +55,14 @@ const ignorees   = ['C:/src/customshells'];
     //.create();
 
 // WORKS
-//myShell
+myShell
     //.reset()
-    //.toFile(nodeOut)
+    .toFile(nodeOut)
     //.tree(root, ignorees)
     //.at(link)
-    //.node(myModule)
+    .node(myModule)
     //.new()
-    //.create();
+    .create();
 /*
 // WORKS
 let myRef = myShell
@@ -76,12 +76,13 @@ console.log(myRef.pid);
 
 // Works
 //myTree.getBranch(root, ignorees);
-myTree.getLeaves(root);
+//myTree.getLeaves(root, Extensions);
 //myTree.fertilize(int);
 
 //myTreeTwo.getBranch(rootTwo);
 //myTreeTwo.getLeaves(root, Extensions);
 
+/*
 // Works
 myTree.on('file', (file, extension) =>{
     console.log("File: "      + file);
@@ -118,7 +119,26 @@ myTree.on('gathered', (errors, directories) => {
     }
 });
 
-/*
+console.log("process.cpuUsage keys" + Object.keys(process.cpuUsage));
+console.log(process.cpuUsage.user);
+console.log(process.cpuUsage.system);
+console.log("process.env: " + process.env);
+console.log("process.execPath: " + process.execPath);
+if (process.getegid) {
+    console.log(`Current gid: ${process.getegid()}`);
+}
+if (process.geteuid) {
+console.log(`Current uid: ${process.geteuid()}`);
+}
+
+console.log("require.main: " + require.main);
+console.log("require.main.filename: " + require.main.filename);
+console.log("module: " + Object.keys(module));
+console.log("process: " + process);
+console.log("process keys: " + Object.keys(process));
+console.log("process._events keys: " + Object.keys(process._events));
+console.log("process.domain: " + process.domain);
+
 // Works
 myTreeTwo.on('file', (file, extension) =>{
     console.log("File: "      + file);

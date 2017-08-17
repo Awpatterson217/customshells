@@ -154,7 +154,7 @@ myShell
 
 ### Run a Node.js module/script in a new working directory with <code>at()</code>
 
-*Note: Scripts must be in the same working directory specified by <code>.at()</code>
+*Note: Scripts, like .bat or .ps, must be in the same working directory specified by <code>.at()</code>
 
 ```js
 myShell
