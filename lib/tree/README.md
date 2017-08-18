@@ -55,9 +55,9 @@ myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 ```
 
 ```js
-myTree.on('file', (file, extension) =>{
+myTree.on('file', (file, dir, extension) =>{
     // Fires each time getLeaves() matches an extension to a file
-    // Returns full path to file and its extension as ".extension"
+    // Returns full path to file, its parent directory, and its extension as ".extension"
 });
 
 myTree.on('dirFound', directory =>{

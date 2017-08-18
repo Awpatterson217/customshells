@@ -1,3 +1,10 @@
+# CustomShell
+Use the CustomShell API to automate tasks, run node packages, and execute scripts more easily without sacrificing flexibility.
+
+<br>
+<br>
+<hr>
+
 ```js
 const customShell = require('customshells');
 
@@ -11,7 +18,6 @@ myShell
     .toFile('myOutput.txt')
     .node('myModule.js')
     .at('foo/bar')
-    .new()
     .create();
 ```
 
@@ -44,11 +50,11 @@ myShell
 ```
 
 
-### Execute a script with <code>execute()</code>
+### Execute a script with <code>run()</code>
 
 ```js
 myShell
-    .execute('myScript.bat')
+    .run('myScript.bat')
     .create();
 ```
 
@@ -68,7 +74,7 @@ Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_pat
 
 ```js
 myShell
-    .execute('myScript.bat')
+    .run('myScript.bat')
     .tree('example/dir')
     .create();
 
@@ -99,11 +105,9 @@ Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.htm
 
 *Note: Writes synchronously.
 
-*Note: When running a Node.js module, <code>toFile()</code> may silently fail when combined with<code>.new()</code>
-
 ```js
 myShell
-    .execute('myScript.bat')
+    .run('myScript.bat')
     .toFile('example/output.txt')
     .create();
 ```
@@ -122,38 +126,32 @@ myShell
 ```
 
 
-### Run a module/script in a new shell window with <code>new()</code>
-
-```js
-myShell
-    .execute('myScript.bat')
-    .toFile('example/output.txt')
-    .new()
-    .create();
-```
-
-
 ### Return a reference to the process
 
 ```js
-let myRef = myShell
+let child = myShell
+                setOptions(
+                {stdio: [process.stdin, process.stdout, process.stderr, 'pipe', 'pipe']}
+                )
                 .node('myModule.js')
                 .create();
 
-console.log(myRef.pid);
+child.stdio[3].write('Send messages to child process');
+
+child.stdio[4].pipe(process.stdout); // Recieve messages from 
+                                     // child process
 ```
 
-
-### Respond to events
+Respond to events.
 
 See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here</a>.
 
 ```js
-let myRef = myShell
+let child = myShell
                 .node('myModule.js')
                 .create();
 
-myRef.on('exit', (code) => {
+child.on('exit', (code) => {
   console.log('About to exit with code: ' + code);
 });
 ```

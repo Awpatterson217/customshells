@@ -1,3 +1,0 @@
-process.cwd(): C:\src\customshells\test
-__dirname: C:\src\customshells\test
-HELLO FROM TEST
