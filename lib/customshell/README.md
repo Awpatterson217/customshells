@@ -53,7 +53,7 @@ myShell
 
 <hr>
 
-### Execute a script with <code>run()</code>
+### Run a script with <code>run()</code>
 
 ```js
 myShell
@@ -176,7 +176,7 @@ newOptions = {
     uid: 10,
     gid: 20,
     env: {
-        my: 'key pairs'
+        my: 'keyPairs'
     }
 }
 
