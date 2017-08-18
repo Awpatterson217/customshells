@@ -1,7 +1,5 @@
 # CustomShell
 Use the CustomShell API to automate tasks, run node packages, and execute scripts more easily without sacrificing flexibility.
-
-<br>
 <br>
 <hr>
 
@@ -10,6 +8,8 @@ const customShell = require('customshells');
 
 let myShell = customShell.createShell();
 ```
+
+<hr>
 
 ### Chainable methods
 
@@ -20,6 +20,8 @@ myShell
     .at('foo/bar')
     .create();
 ```
+
+<hr>
 
 ### Open an instance of your favorite shell in a new window with <code>open()</code>
 
@@ -49,6 +51,7 @@ myShell
     .create();
 ```
 
+<hr>
 
 ### Execute a script with <code>run()</code>
 
@@ -58,6 +61,7 @@ myShell
     .create();
 ```
 
+<hr>
 
 ### Run a Node.js module/script recursively through directories with <code>tree()</code>
 
@@ -82,6 +86,7 @@ myShell
 .tree('example/dir', ['directories/to/ignore'])
 ```
 
+<hr>
 
 ### Run a Node.js module/script in a new working directory with <code>at()</code>
 
@@ -94,6 +99,7 @@ myShell
     .create();
 ```
 
+<hr>
 
 ### Pipe output to file with <code>toFile()</code>
 
@@ -112,6 +118,7 @@ myShell
     .create();
 ```
 
+<hr>
 
 ### Change the way output is streamed to a file
 
@@ -125,6 +132,7 @@ myShell
     .toFile('myOutput.txt', 'FLAG');
 ```
 
+<hr>
 
 ### Return a reference to the process
 
@@ -142,7 +150,7 @@ child.stdio[4].pipe(process.stdout); // Recieve messages from
                                      // child process
 ```
 
-Respond to events.
+**Respond to events.**
 
 See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here</a>.
 
@@ -156,6 +164,7 @@ child.on('exit', (code) => {
 });
 ```
 
+<hr>
 
 ### Set options with <code>setOptions()</code>
 
@@ -174,6 +183,7 @@ myShell
     .setOptions(newOptions);
 ```
 
+<hr>
 
 ### Reset customShell with <code>reset()</code>
 
@@ -185,6 +195,7 @@ myShell
     .create();
 ```
 
+<hr>
 
 ### Nothing happens until <code>create()</code>
 

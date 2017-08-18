@@ -1,10 +1,9 @@
 # Tree 
 Handles deeply nested directory structures using recursion and the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a>.
 <br>
-<br>
 <hr>
 
-Instantiate Trees with the <code>new</code> keyword
+**Instantiate Trees with the** <code>new</code> **keyword**
 
 ```js
 const Tree = require('customshells').Tree;
@@ -12,19 +11,23 @@ const Tree = require('customshells').Tree;
 let myTree  = new Tree();
 ```
 
-Pass an empty string to begin in the current working directory: <code>.getBranch('')</code>
+<hr>
+
+**Pass an empty string to begin in the current working directory:** <code>.getBranch('')</code>
 <br>
 <br>
-Use absolute paths: <code>.getLeaves('C:/Users/user/example')</code> &nbsp;  Or relative paths: <code>.getBranch('../example/path')</code>
+**Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code> &nbsp; **Or relative paths:** <code>.getBranch('../example/path')</code>
 <br>
 <br>
-Avoid beginning paths with: <code>/</code> or <code>\\</code>
+**Avoid beginning paths with:** <code>/</code> or <code>\\</code>
 <br>
 <br>
+**Formats path with** <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+
+<hr>
 
 ### Recursively return all directories with <code>getBranch()</code>
 
-Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
 // Optionally, pass an array of directories to ignore
@@ -46,6 +49,8 @@ myTree.on('error', err =>{
     // Handle errors
 });
 ```
+
+<hr>
 
 ### Recursively match files by extension with <code>getLeaves()</code>
 

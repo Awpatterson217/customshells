@@ -1,17 +1,15 @@
 # CustomShells
 A Node.js library to simplify the use of shells and navigation of file systems.
 <br>
-<br>
 <hr>
 
 ```js
-
-
-
-
-
+npm install custom-shells
 ```
 
+<hr>
+
+### Example Usage:
 
 ```js
 // An instance of Tree makes handling nested file systems 
@@ -49,9 +47,13 @@ myShell
     .create();                 // nested directory found
 
 ```
-<br>
-<br>
-[Read more about the Tree API here](lib/Tree/README.md)
-<br>
-<br>
-[Read more about the CustomShell API here](lib/Tree/README.md)
+
+<hr>
+
+<a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
+Tree API Documentation
+</a>
+
+ <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
+CustomShell API Documentation
+</a>
