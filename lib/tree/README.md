@@ -14,19 +14,19 @@ let myTree  = new Tree();
 
 <hr>
 
-**Pass an empty string to begin in the current working directory:** <code>''</code>
+Pass an empty string to begin in the current working directory: <code>''</code>
 <br>
 <br>
-**Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code>
+Use absolute paths: <code>.getLeaves('C:/Users/user/example')</code>
 <br>
 <br>
-**Or relative paths:** <code>.getBranch('../example/path')</code>
+Or relative paths: <code>.getBranch('../example/path')</code>
 <br>
 <br>
-**Avoid beginning paths with:** <code>/</code> or <code>\\</code>
+Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
-**Formats path with** <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 <hr>
 
