@@ -58,7 +58,6 @@ myTree.on('file', (file, dir, extension) =>{
 
 });
 
-
                    // OR
 
         // Use the tree method to run
