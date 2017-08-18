@@ -17,6 +17,7 @@ let myTree  = new Tree();
 <br>
 <br>
 **Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code>
+<br>
 **Or relative paths:** <code>.getBranch('../example/path')</code>
 <br>
 <br>

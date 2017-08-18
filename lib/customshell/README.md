@@ -69,6 +69,7 @@ myShell
 <br>
 <br>
 **Use absolute paths:** <code>.tree('C:/Users/user/example')</code>
+<br>
 **Or relative paths:** <code>.tree('../example/path')</code>
 <br>
 <br>
