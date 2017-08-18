@@ -1,6 +1,7 @@
 # Tree 
 Handles deeply nested directory structures using recursion and the Node.js <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a>.
 <br>
+<br>
 <hr>
 
 **Instantiate Trees with the** <code>new</code> **keyword**
@@ -17,6 +18,7 @@ let myTree  = new Tree();
 <br>
 <br>
 **Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code>
+<br>
 <br>
 **Or relative paths:** <code>.getBranch('../example/path')</code>
 <br>
