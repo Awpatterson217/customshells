@@ -34,6 +34,8 @@ let myTree  = new Tree();
 myTree.getBranch('example/root', ['example/dir/to/ignore']);
 ``` 
 
+**Events:** 
+
 ```js
 myTree.on('dir', directory =>{
     // Fires each time getBranch() finds a directory
@@ -58,6 +60,8 @@ myTree.on('error', err =>{
 // Optionally, pass an array of directories to ignore
 myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 ```
+
+**Events:** 
 
 ```js
 myTree.on('file', (file, dir, extension) =>{
