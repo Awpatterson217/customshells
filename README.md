@@ -10,11 +10,11 @@ npm install customshells
 
 <br>
 <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
-Tree API Documentation
+CustomShell API Documentation
 </a>
 <br>
  <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
-CustomShell API Documentation
+Tree API Documentation
 </a>
 <br>
 <hr>
