@@ -47,7 +47,7 @@ myShell.open('cmd');
 
 ```js
 myShell
-    .node('myModule.js')
+    .node('myModule.js', 'optionally', 'pass', 'parameters')
     .create();
 ```
 
@@ -57,7 +57,7 @@ myShell
 
 ```js
 myShell
-    .run('myScript.bat')
+    .run('myScript.bat', 'optionally', 'pass', 'parameters')
     .create();
 ```
 

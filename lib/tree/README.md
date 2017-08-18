@@ -41,18 +41,26 @@ myTree.getBranch('example/root', ['example/dir/to/ignore']);
 **Events:** 
 
 ```js
+
 myTree.on('dir', directory =>{
+
     // Fires each time getBranch() finds a directory
+
 });
 
+// Fired when getBranch() is finished searching
 myTree.on('gathered', (errors, directories) =>{
-    // Fired when getBranch() is finished searching
+
     // If it exists, errors is an array of Objects { dir, msg }
+
     // directories is an array of matching directories
+
 });
 
 myTree.on('error', err =>{
+
     // Handle errors
+    
 });
 ```
 
@@ -68,24 +76,37 @@ myTree.getLeaves('example/root', ['.js', '.css'], ['example/dir/to/ignore']);
 **Events:** 
 
 ```js
+
+// Fires each time getLeaves() matches an extension to a file
 myTree.on('file', (file, dir, extension) =>{
-    // Fires each time getLeaves() matches an extension to a file
-    // Returns full path to file, its parent directory, and its extension as ".extension"
+    
+    // Returns full path to file, its parent directory,
+    // and its extension as ".extension"
+
 });
 
 myTree.on('dirFound', directory =>{
+
     // Fires each time getLeaves() finds a directory
+
 });
 
+// Fired when getLeaves() is finished searching
 myTree.on('autumn', (errors, files, extensionsMatched) =>{
-    // Fired when getLeaves() is finished searching
+    
     // If it exists, errors is an array of Objects { dir, msg }
+
     // Files is an array of matching files
-    // If it exists extensionsMatched is an array of extensions
-    // matched successfully by getLeaves()
+
+    // If it exists, extensionsMatched is an array of
+    // extensions matched successfully by getLeaves()
+
 });
 
 myTree.on('error', err =>{
+
     // Handle errors
+
 });
+
 ```

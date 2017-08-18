@@ -28,7 +28,8 @@ Tree API Documentation
 
 ```js
 
-// Find all CSS and HTML files in a nested file structure
+// Find all CSS and HTML files in a 
+// nested file structure
 myTree.getLeaves('example/project/root/', [
     '.css',
     '.html'
@@ -56,8 +57,8 @@ myTree.on('file', (file, dir, extension) =>{
 
                    // OR
 
-        // Use the tree method to run
-        // a Node.js app in every
+        // Use .tree() to run
+        // an app/script in every
         // nested directory found
 
 myShell
