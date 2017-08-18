@@ -33,12 +33,16 @@ let myShell = customShell.createShell();
 
 
 // Find all CSS and HTML files in a nested file structure
-myTree.getLeaves('example/project/root/', ['.css', '.html']);
+myTree.getLeaves('example/project/root/', [
+    '.css',
+    '.html'
+    ]);
 
 // Deal with files asynchronously
 myTree.on('file', (file, dir, extension) =>{
 
-    myShell.toFile('myLogs.txt');  // Pipe output to myLogs.txt
+    // Pipe output to myLogs.txt
+    myShell.toFile('myLogs.txt');  
 
     // Run Node.js applications dynamically
     if(extension === '.html') 
@@ -57,11 +61,14 @@ myTree.on('file', (file, dir, extension) =>{
 
                    // OR
 
+        // Use the tree method to run
+        // a Node.js app in every
+        // nested directory found
 
 myShell
-    .node('example/module.js') // Use the tree method to run
-    .tree('example/root/dir')  // a Node.js app in every
-    .create();                 // nested directory found
+    .node('example/module.js')
+    .tree('example/root/dir')
+    .create();   
 
 ```
 
