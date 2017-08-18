@@ -3,9 +3,19 @@ A Node.js library to simplify the use of shells and navigation of file systems.
 <br>
 <hr>
 <br>
+
 ```js
 npm install custom-shells
 ```
+
+<br>
+<a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
+Tree API Documentation
+</a>
+<br>
+ <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
+CustomShell API Documentation
+</a>
 <br>
 <hr>
 
@@ -48,12 +58,4 @@ myShell
 
 ```
 
-<hr>
 
-<a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
-Tree API Documentation
-</a>
-<br>
- <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
-CustomShell API Documentation
-</a>
