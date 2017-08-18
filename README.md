@@ -22,33 +22,35 @@ CustomShell API Documentation
 ### Example Usage:
 
 ```js
-// An instance of Tree makes handling nested file systems 
-// simple by leveraging Node's event-driven model.
+
 let myTree  = new Tree();
-// create a customShell object to dynamically run Node.js applications.
 let myShell = customShell.createShell();
 
 
-// Find all CSS and HTML files in a deeply nested file structure.
+// Find all CSS and HTML files in a nested file structure
 myTree.getLeaves('example/project/root/', ['.css', '.html']);
 
-// Deal with files asynchronously.
+// Deal with files asynchronously
 myTree.on('file', (file, dir, extension) =>{
 
     myShell.toFile('myLogs.txt');  // Pipe output to myLogs.txt
 
-    if(extension === '.html') myShell.node('handleHTML.js', 'file'); // Run a Node.js app
+    // Run Node.js applications dynamically
+    if(extension === '.html') 
+        myShell.node('handleHTML.js', file); 
 
-    if(extension === '.css') myShell.node('handleCSS.js', 'file');   // Pass a parameter
+    // Optionally, pass a parameter
+    if(extension === '.css') 
+        myShell.node('handleCSS.js', file);   
         
     myShell
-        .at(dir)   // Choose where your Node.js application runs 
+        .at(dir)   // Dynamically choose where it runs
         .create(); // Chain commands
 
 });
 
 
-// OR
+                   // OR
 
 
 myShell
