@@ -5,7 +5,7 @@ A Node.js library to simplify the use of shells and navigation of file systems.
 <br>
 
 ```js
-npm install custom-shells
+npm install customshells
 ```
 
 <br>
