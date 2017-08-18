@@ -14,7 +14,7 @@ let myTree  = new Tree();
 
 <hr>
 
-**Pass an empty string to begin in the current working directory:** <code>.getBranch('')</code>
+**Pass an empty string to begin in the current working directory:** <code>''</code>
 <br>
 <br>
 **Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code>
