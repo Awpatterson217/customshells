@@ -16,7 +16,8 @@ let myTree  = new Tree();
 **Pass an empty string to begin in the current working directory:** <code>.getBranch('')</code>
 <br>
 <br>
-**Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code> &nbsp; **Or relative paths:** <code>.getBranch('../example/path')</code>
+**Use absolute paths:** <code>.getLeaves('C:/Users/user/example')</code>
+**Or relative paths:** <code>.getBranch('../example/path')</code>
 <br>
 <br>
 **Avoid beginning paths with:** <code>/</code> or <code>\\</code>

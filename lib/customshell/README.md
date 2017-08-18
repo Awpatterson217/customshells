@@ -65,16 +65,17 @@ myShell
 
 ### Run a Node.js module/script recursively through directories with <code>tree()</code>
 
-Pass an empty string to begin in the current working directory: <code>.tree('')</code>
+**Pass an empty string to begin in the current working directory:** <code>.tree('')</code>
 <br>
 <br>
-Use absolute paths: <code>.tree('C:/Users/user/example')</code> &nbsp;  Or relative paths: <code>.tree('../example/path')</code>
+**Use absolute paths:** <code>.tree('C:/Users/user/example')</code>
+**Or relative paths:** <code>.tree('../example/path')</code>
 <br>
 <br>
-Avoid beginning paths with: <code>/</code> or <code>\\</code>
+**Avoid beginning paths with:** <code>/</code> or <code>\\</code>
 <br>
 <br>
-Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+**Formats path with** <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
 
 ```js
 myShell
@@ -118,9 +119,7 @@ myShell
     .create();
 ```
 
-<hr>
-
-### Change the way output is streamed to a file
+**Change the way output is streamed to a file**
 
 Default flag: <code> 'a' </code>
 
