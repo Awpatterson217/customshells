@@ -4,7 +4,7 @@ Handles deeply nested directory structures using recursion and the Node.js <a hr
 <br>
 <hr>
 
-**Instantiate Trees with the** <code>new</code> **keyword**
+### Instantiate Trees with the** <code>new</code> keyword
 
 ```js
 const Tree = require('customshells').Tree;
