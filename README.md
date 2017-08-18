@@ -28,10 +28,6 @@ Tree API Documentation
 
 ```js
 
-let myTree  = new Tree();
-let myShell = customShell.createShell();
-
-
 // Find all CSS and HTML files in a nested file structure
 myTree.getLeaves('example/project/root/', [
     '.css',

@@ -1,6 +1,6 @@
 {"name": "customshells"
 ,"main" : "./index.js"
-,"version": "1.0.2"
+,"version": "1.0.3"
 ,"author": "Adam W Patterson"
 ,"description": "A library to simplify the creation of shells in Node.js"
 ,"license": "(MIT OR Apache-2.0)"
@@ -28,7 +28,6 @@
 ]
 ,"directories.lib": "lib"
 ,"directories.test": "test"
-,"os": ["linux", "darwin", "win"]
 ,"repository":
 {"type": "git"
 , "url": "https://github.com/Awpatterson217/customshells.git"
