@@ -1,8 +1,8 @@
 {"name": "customshells"
 ,"main" : "./index.js"
-,"version": "1.0.4"
+,"version": "1.0.5"
 ,"author": "Adam W Patterson"
-,"description": "A library to simplify the creation of shells in Node.js"
+,"description": "A Node.js library to simplify the use of shells and navigation of file systems. "
 ,"license": "(MIT OR Apache-2.0)"
 ,"keywords" : [
     "tree", 

@@ -51,10 +51,9 @@ myTree.on('file', (file, dir, extension) =>{
         
     myShell
         .at(dir)   // Dynamically choose where it runs
-        .create(); // Chain commands
+        .create(); // Chain methods
 
 });
-
                    // OR
 
         // Use .tree() to run
