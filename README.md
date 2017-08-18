@@ -1,4 +1,5 @@
 # CustomShells
+<a href="https://badge.fury.io/js/customshells"><img src="https://badge.fury.io/js/customshells.svg" alt="npm version" height="18"></a>
 A Node.js library to simplify the use of shells and navigation of file systems.
 <br>
 <hr>
