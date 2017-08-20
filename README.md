@@ -50,7 +50,7 @@ myTree.on('file', (file, dir, extension) =>{
         myShell.node('handleCSS.js', file);   
         
     myShell
-        .at(dir)   // Dynamically choose where it runs
+        .at(dir)   // Choose where it runs
         .create(); // Chain methods
 
 });

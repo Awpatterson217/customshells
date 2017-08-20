@@ -3,7 +3,11 @@ Handles deeply nested directory structures using recursion and the Node.js <a hr
 <br>
 <br>
 <hr>
-
+<br>
+<a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
+CustomShell API Documentation
+</a>
+<br>
 ### Instantiate Trees with the <code>new</code> keyword
 
 ```js
@@ -26,7 +30,7 @@ Or relative paths: <code>.getBranch('../example/path')</code>
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
-Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync()</a>.
 
 <hr>
 

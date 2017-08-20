@@ -1,6 +1,11 @@
 # CustomShell
 Use the CustomShell API to automate tasks, run node packages, and execute scripts more easily without sacrificing flexibility.
 <br>
+<br>
+ <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
+Tree API Documentation
+</a>
+<br>
 <hr>
 
 ```js
@@ -77,7 +82,7 @@ Or relative paths: <code>.tree('../example/path')</code>
 Avoid beginning paths with: <code>/</code> or <code>\\</code>
 <br>
 <br>
-Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync(dir)</a>.
+Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync()</a>.
 
 ```js
 myShell

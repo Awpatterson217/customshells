@@ -38,3 +38,21 @@ C:\src\customshells\test\testFolders\folderTwo\folderFive>TIME /T ; 1>scriptOutp
 C:\src\customshells\test\testFolders\folderTwo\folderFour>TIME /T ; 1>scriptOutput.txt 
 'myScript.bat' is not recognized as an internal or external command,
 operable program or batch file.
+
+C:\src\customshells\test\testFolders\folderEight>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\testFolders\folderNine>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\testFolders\folderSeven>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\testFolders\folderSix>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\testFolders\folderTwo>TIME /T ; 1>scriptOutput.txt 
+'myScript.bat' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\src\customshells\test\testFolders\folderTwo\folderFive>TIME /T ; 1>scriptOutput.txt 
+
+C:\src\customshells\test\testFolders\folderTwo\folderFour>TIME /T ; 1>scriptOutput.txt 
+'myScript.bat' is not recognized as an internal or external command,
+operable program or batch file.
