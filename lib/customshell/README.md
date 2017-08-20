@@ -109,7 +109,7 @@ myShell
 Will append file or create file at runtime.
 
 
-Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative(process.cwd(), 'example/output.txt')</a>.
+Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.html#path_path_relative_from_to">path.relative()</a>.
 
 
 *Note: Writes synchronously.
