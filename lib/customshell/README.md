@@ -144,9 +144,15 @@ myShell
 
 ```js
 let child = myShell
-                setOptions(
-                {stdio: [process.stdin, process.stdout, process.stderr, 'pipe', 'pipe']}
-                )
+                setOptions({ 
+                    stdio: [
+                        process.stdin, 
+                        process.stdout, 
+                        process.stderr, 
+                        'pipe', 
+                        'pipe'
+                    ]
+                })
                 .node('myModule.js')
                 .create();
 
