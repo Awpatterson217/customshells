@@ -162,7 +162,7 @@ child.stdio[4].pipe(process.stdout); // Recieve messages from
                                      // child process
 ```
 
-**Respond to events.**
+**Respond to events**
 
 See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here</a>.
 
