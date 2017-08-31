@@ -27,13 +27,18 @@ Tree API Documentation
 ### Example Usage:
 
 ```js
+const customshell = require('customshells');
+const Tree        = require('customshells').Tree;
+
+let myShell = customshell.createShell();
+let myTree  = new Tree();
 
 // Find all CSS and HTML files in a 
 // nested file structure
-myTree.getLeaves('example/project/root/', [
+myTree.getLeaves('example/root/', [
     '.css',
     '.html'
-    ]);
+]);
 
 // Deal with files asynchronously
 myTree.on('file', (file, dir, extension) =>{
