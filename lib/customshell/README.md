@@ -91,7 +91,11 @@ myShell
     .create();
 
 // Pass an array of directories to ignore
-.tree('example/dir', ['directories/to/ignore'])
+.tree('example/dir', [
+    'directories',
+    'to',
+    'ignore'
+])
 ```
 
 <hr>
