@@ -2,10 +2,6 @@
 Use the CustomShell API to automate tasks, run node packages, and execute scripts more easily without sacrificing flexibility.
 <br>
 <br>
- <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
-Tree API Documentation
-</a>
-<br>
 <hr>
 
 ```js
@@ -90,19 +86,17 @@ myShell
     .tree('example/dir')
     .create();
 
-// Pass an array of directories to ignore
+// Optionally pass an array 
+// of directories to ignore
 .tree('example/dir', [
-    'directories',
-    'to',
-    'ignore'
+    'example/directories',
+    'to/ignore'
 ])
 ```
 
 <hr>
 
 ### Run a Node.js module/script in a new working directory with <code>at()</code>
-
-*Note: Scripts, like .bat or .ps, must be in the same working directory specified by <code>.at()</code>
 
 ```js
 myShell
