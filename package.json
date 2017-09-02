@@ -1,34 +1,48 @@
-{"name": "customshells"
-,"main" : "./index.js"
-,"version": "1.0.7"
-,"author": "Adam W Patterson"
-,"description": "A Node.js library to simplify the use of shells and navigation of file systems. "
-,"license": "(MIT OR Apache-2.0)"
-,"keywords" : [
-    "tree", 
-    "customshells", 
-    "customshell", 
-    "custom", 
-    "shell", 
-    "shells", 
-    "recursively", 
-    "recursive",
-    "recursion",
-    "folders",
-    "directories",
-    "directory",
-    "nested",
-    "command",
-    "commands",
-    "node",
-    "script",
-    "scripts",
-    "module",
-    "modules"
-]
-,"directories.lib": "lib"
-,"directories.test": "test"
-,"repository":
-{"type": "git"
-, "url": "https://github.com/Awpatterson217/customshells.git"
-}}
+{
+    "name": "customshells",
+    "version": "1.0.7",
+    "description": "A Node.js library to simplify the use of shells and navigation of file systems. ",
+    "main": "index.js",
+    "directories.lib": "lib",
+    "directories.test": "test",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Awpatterson217/customshells.git"
+    },
+    "keywords": [
+        "tree",
+        "customshells",
+        "customshell",
+        "custom",
+        "shell",
+        "shells",
+        "recursively",
+        "recursive",
+        "recursion",
+        "files",
+        "file",
+        "system",
+        "navigate",
+        "folders",
+        "folder",
+        "directories",
+        "directory",
+        "nested",
+        "command",
+        "commands",
+        "node",
+        "script",
+        "scripts",
+        "module",
+        "modules"
+    ],
+    "author": "Adam W Patterson",
+    "license": "(MIT OR Apache-2.0)",
+    "bugs": {
+      "url": "https://github.com/Awpatterson217/customshells/issues"
+    },
+    "homepage": "https://github.com/Awpatterson217/customshells#readme"
+  }
