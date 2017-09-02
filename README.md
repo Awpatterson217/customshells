@@ -31,8 +31,12 @@ let myShell = customshell.createShell();
     // at every node in 
     // a directory tree.
 
+    // Pipe all output
+    // to 'example/output.txt'.
+
 myShell
     .node('example/module.js')
+    .toFile('example/output.txt')
     .tree('example/root/dir')
     .create();   
 
