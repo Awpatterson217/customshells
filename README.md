@@ -1,5 +1,5 @@
 # CustomShells
-A Node.js library to simplify the use of shells and navigation of file systems.
+ A library to simplify the use of shells in Node.js
 <br>
 <br>
 <a href="https://badge.fury.io/js/customshells"><img src="https://badge.fury.io/js/customshells.svg" alt="npm version" height="18"></a>
@@ -18,52 +18,18 @@ npm install customshells
 CustomShell API Documentation
 </a>
 <br>
- <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/tree/README.md">
-Tree API Documentation
-</a>
-<br>
 <hr>
 
 ### Example Usage:
 
 ```js
 const customshell = require('customshells');
-const Tree        = require('customshells').Tree;
 
 let myShell = customshell.createShell();
-let myTree  = new Tree();
 
-// Find all CSS and HTML files in a 
-// nested file structure
-myTree.getLeaves('example/root/', [
-    '.css',
-    '.html'
-]);
-
-// Deal with files asynchronously
-myTree.on('file', (file, dir, extension) =>{
-
-    // Pipe output to myLogs.txt
-    myShell.toFile('myLogs.txt');  
-
-    // Run Node.js applications dynamically
-    if(extension === '.html') 
-        myShell.node('handleHTML.js', file); 
-
-    // Optionally, pass a parameter
-    if(extension === '.css') 
-        myShell.node('handleCSS.js', file);   
-        
-    myShell
-        .at(dir)   // Choose where it runs
-        .create(); // Chain methods
-
-});
-                   // OR
-
-        // Use .tree() to run
-        // an app/script in every
-        // nested directory found
+    // Run a node module
+    // at every node in 
+    // a directory tree.
 
 myShell
     .node('example/module.js')

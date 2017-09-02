@@ -5,12 +5,11 @@ const customshell = require('../');
 // WORKS
 let myShell = customshell.createShell();
 
-const root       = 'out'; 
-const Extensions = ['.js', '.css']; 
-const link       = 'testFolder';
+const root       = 'testFolders'; 
+const link       = 'testFolders/folderEight';
 const nodeOut    = 'nodeOut.txt';
 const cmdOut     = 'cmdOut.txt';
-const myModule   = 'server.js';
+const myModule   = 'myModule.js';
 const myScript   = 'myScript.bat';
 const int        = 12;
 const ignorees   = ['C:/src/customshells'];
@@ -18,18 +17,18 @@ const ignorees   = ['C:/src/customshells'];
 // NODE
 //myShell
     //.reset()
-    //.toFile(cmdOut)
+    //.toFile(nodeOut)
     //.at(link)
     //.node(myModule)
     //.create();
 
 // RUN 
-myShell
-    .reset()
-    .toFile(cmdOut)
-    .tree('testFolders')
-    .run(myScript)
-    .create();
+//myShell
+    //.reset()
+    //.toFile(cmdOut)
+    //.at(link)
+    //.run(myScript)
+    //.create();
 
 // NODE TREE
 //myShell
@@ -43,8 +42,8 @@ myShell
 //myShell
     //.reset()
     //.toFile(cmdOut)
-    //.run(myScript)
     //.tree(root)
+    //.run(myScript)
     //.create();
 
 
@@ -58,7 +57,8 @@ myShell
                 //.node('myModule.js')
                 //.create();
 
-console.log(myRef.pid);
+//console.log(myRef.pid);
+
 
 /*    RANDOM
 
