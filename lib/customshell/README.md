@@ -1,5 +1,5 @@
 # CustomShell
-Use the CustomShell API to automate tasks, run Node.js packages, and execute scripts more easily without sacrificing flexibility.
+Use the CustomShell API to automate tasks, run Node.js modules, and execute scripts more easily without sacrificing flexibility.
 <br>
 <br>
 <hr>
