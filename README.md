@@ -15,7 +15,7 @@ npm install customshells
 
 <br>
 <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
-CustomShell API Documentation
+CustomShells API Documentation
 </a>
 <br>
 <hr>
@@ -23,11 +23,11 @@ CustomShell API Documentation
 ### Example Usage:
 
 ```js
-const customshell = require('customshells');
+const customshells = require('customshells');
 
-let myShell = customshell.createShell();
+let myShell = customshells.createShell();
 
-    // Run a node module
+    // Run a Node.js module
     // at every node in 
     // a directory tree.
 
@@ -35,9 +35,9 @@ let myShell = customshell.createShell();
     // to 'example/output.txt'.
 
 myShell
-    .node('example/module.js')
+    .node('myModule.js')
+    .tree('example/root/node')
     .toFile('example/output.txt')
-    .tree('example/root/dir')
     .create();   
 
 ```
