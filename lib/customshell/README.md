@@ -1,4 +1,4 @@
-# customshells
+# CustomShells
 Use the customshells API to automate tasks, run Node.js modules, and execute scripts more easily without sacrificing flexibility.
 <br>
 <br>
