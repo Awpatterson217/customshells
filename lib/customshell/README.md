@@ -1,13 +1,13 @@
-# CustomShell
-Use the CustomShell API to automate tasks, run Node.js modules, and execute scripts more easily without sacrificing flexibility.
+# customshells
+Use the customshells API to automate tasks, run Node.js modules, and execute scripts more easily without sacrificing flexibility.
 <br>
 <br>
 <hr>
 
 ```js
-const customShell = require('customshells');
+const customshells = require('customshells');
 
-let myShell = customShell.createShell();
+let myShell = customshells.createShell();
 ```
 
 <hr>

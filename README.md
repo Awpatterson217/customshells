@@ -1,4 +1,4 @@
-# CustomShells
+# customshells
  A library to simplify the use of shells in Node.js
 <br>
 <br>

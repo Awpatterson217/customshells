@@ -47,5 +47,8 @@
   "homepage": "https://github.com/Awpatterson217/customshells#readme",
   "dependencies": {
     "tree-trav": "^1.0.1"
-  }
+  },
+  "bundledDependencies": [
+    "tree-trav"
+  ]
 }
