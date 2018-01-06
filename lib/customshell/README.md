@@ -142,7 +142,7 @@ myShell
 
 ```js
 let child = myShell
-                setOptions({ 
+                .setOptions({ 
                     stdio: [
                         process.stdin, 
                         process.stdout, 
