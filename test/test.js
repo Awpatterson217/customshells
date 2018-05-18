@@ -3,7 +3,7 @@
 const customshell = require('../');
 
 // WORKS
-let myShell = customshell.createShell();
+const shell = customshell.create();
 
 const root       = 'testFolders'; 
 const link       = 'testFolders/folderEight';
@@ -15,47 +15,47 @@ const int        = 12;
 const ignorees   = ['C:/src/customshells'];
 
 // NODE
-//myShell
+//shell
     //.reset()
     //.toFile(nodeOut)
     //.at(link)
     //.node(myModule)
-    //.create();
+    //.run();
 
-// RUN 
-//myShell
+// EXECUTE 
+//shell
     //.reset()
     //.toFile(cmdOut)
     //.at(link)
-    //.run(myScript)
-    //.create();
+    //.execute(myScript)
+    //.run();
 
 // NODE TREE
-//myShell
+//shell
     //.reset()
     //.toFile(nodeOut)
     //.node(myModule)
     //.tree(root)
-    //.create();
+    //.run();
 
-// RUN TREE
-//myShell
+// EXECUTE TREE
+//shell
     //.reset()
     //.toFile(cmdOut)
     //.tree(root)
-    //.run(myScript)
-    //.create();
+    //.execute(myScript)
+    //.run();
 
 
-//let child = myShell
+//const child = shell
                 //.at(link) 
                 //.toFile('mylogs.txt') 
                 //.setOptions()                    
-                //.create(); 
+                //.run(); 
 
-//let myRef = myShell
+//const myRef = shell
                 //.node('myModule.js')
-                //.create();
+                //.run();
 
 //console.log(myRef.pid);
 

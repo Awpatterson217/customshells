@@ -1,6 +1,6 @@
 {
   "name": "customshells",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "A Node.js library to simplify the use of shells and navigation of file systems. ",
   "main": "index.js",
   "directories.lib": "lib",

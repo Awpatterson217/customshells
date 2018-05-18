@@ -1,4 +1,4 @@
-# CustomShells
+# customshells
 Use the customshells API to automate tasks, run Node.js modules, and execute scripts more easily without sacrificing flexibility.
 <br>
 <br>
@@ -7,7 +7,7 @@ Use the customshells API to automate tasks, run Node.js modules, and execute scr
 ```js
 const customshells = require('customshells');
 
-let myShell = customshells.createShell();
+const shell = customshells.create();
 ```
 
 <hr>
@@ -15,31 +15,31 @@ let myShell = customshells.createShell();
 ### Chainable methods
 
 ```js
-myShell
+shell
     .toFile('myOutput.txt')
     .node('myModule.js')
     .at('foo/bar')
-    .create();
+    .run();
 ```
 
 <hr>
 
-### Open an instance of your favorite shell in a new window with <code>open()</code>
+### Open shell instances in a new window with <code>open()</code>
 
-Runs independently of <code>.create()</code> 
+Runs independently of <code>.run()</code> 
 
 ```js
 
-myShell.open('node');
+shell.open('node');
 
 
-myShell.open('python');
-
-// Windows only
-myShell.open('powershell'); 
+shell.open('python');
 
 // Windows only
-myShell.open('cmd');
+shell.open('powershell'); 
+
+// Windows only
+shell.open('cmd');
 ```
 
 <hr>
@@ -47,19 +47,19 @@ myShell.open('cmd');
 ### Run a Node.js module with <code>node()</code>
 
 ```js
-myShell
+shell
     .node('myModule.js', 'optionally', 'pass', 'parameters')
-    .create();
+    .run();
 ```
 
 <hr>
 
-### Run a script with <code>run()</code>
+### Run a script with <code>exe()</code>
 
 ```js
-myShell
-    .run('myScript.bat', 'optionally', 'pass', 'parameters')
-    .create();
+shell
+    .exe('myScript.bat', 'optionally', 'pass', 'parameters')
+    .run();
 ```
 
 <hr>
@@ -81,10 +81,10 @@ Avoid beginning paths with: <code>/</code> or <code>\\</code>
 Formats path with <a href="https://nodejs.org/api/fs.html#fs_fs_realpathsync_path_options">fs.realpathSync()</a>.
 
 ```js
-myShell
-    .run('myScript.bat')
+shell
+    .execute('myScript.bat')
     .tree('example/dir')
-    .create();
+    .run();
 
 // Optionally pass an array 
 // of directories to ignore
@@ -99,10 +99,10 @@ myShell
 ### Run a Node.js module/script in a new working directory with <code>at()</code>
 
 ```js
-myShell
+shell
     .node('myModule.js')
     .at('./example/dir')
-    .create();
+    .run();
 ```
 
 <hr>
@@ -118,10 +118,10 @@ Formats path with <a href="https://nodejs.org/dist/latest-v8.x/docs/api/path.htm
 *Note: Writes synchronously.
 
 ```js
-myShell
-    .run('myScript.bat')
+shell
+    .execute('myScript.bat')
     .toFile('example/output.txt')
-    .create();
+    .run();
 ```
 
 **Change the way output is streamed to a file**
@@ -132,7 +132,7 @@ See a list of flags <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.htm
 
 ```js
 
-myShell
+shell
     .toFile('myOutput.txt', 'FLAG');
 ```
 
@@ -141,7 +141,7 @@ myShell
 ### Return a reference to the process
 
 ```js
-let child = myShell
+const child = shell
                 .setOptions({ 
                     stdio: [
                         process.stdin, 
@@ -152,7 +152,7 @@ let child = myShell
                     ]
                 })
                 .node('myModule.js')
-                .create();
+                .run();
 
 child.stdio[3].write('Send messages to child process');
 
@@ -165,9 +165,9 @@ child.stdio[4].pipe(process.stdout); // Recieve messages from
 See a list of events <a href="https://nodejs.org/dist/latest-v8.x/docs/api/process.html#process_process_events">here</a>.
 
 ```js
-let child = myShell
+const child = shell
                 .node('myModule.js')
-                .create();
+                .run();
 
 child.on('exit', (code) => {
   console.log('About to exit with code: ' + code);
@@ -189,7 +189,7 @@ newOptions = {
     }
 }
 
-myShell
+shell
     .setOptions(newOptions);
 ```
 
@@ -199,19 +199,19 @@ myShell
 
 ```js
 
-myShell
+shell
     .reset()
     .node('myModule.js')
-    .create();
+    .run();
 ```
 
 <hr>
 
-### Nothing happens until <code>create()</code>
+### Nothing happens until <code>run()</code>
 
 ```js
-myShell
-    .create();
+shell
+    .run();
 ```
 
 Returns an instance of <a href="https://nodejs.org/dist/latest-v8.x/docs/api/child_process.html#child_process_class_childprocess">ChildProcess</a>. 

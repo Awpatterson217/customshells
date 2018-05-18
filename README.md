@@ -1,4 +1,4 @@
-# CustomShells
+# customshells
  A library to simplify the use of shells in Node.js
 <br>
 <br>
@@ -15,7 +15,7 @@ npm install customshells
 
 <br>
 <a href="https://github.com/Awpatterson217/customshells/blob/master/lib/customshell/README.md">
-CustomShells API Documentation
+customshells API Documentation
 </a>
 <br>
 <hr>
@@ -25,7 +25,7 @@ CustomShells API Documentation
 ```js
 const customshells = require('customshells');
 
-let myShell = customshells.createShell();
+const shell = customshells.create();
 
     // Run a Node.js module
     // at every node in 
@@ -34,11 +34,11 @@ let myShell = customshells.createShell();
     // Pipe all output
     // to 'example/output.txt'.
 
-myShell
+shell
     .node('myModule.js')
     .tree('example/root/node')
     .toFile('example/output.txt')
-    .create();   
+    .run();   
 
 ```
 
